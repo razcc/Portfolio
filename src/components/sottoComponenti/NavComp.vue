@@ -77,6 +77,7 @@ export default {
             position: fixed;
             top: 5%;
             right: 5%;
+            z-index: 100;
             cursor: pointer;
             transition: all .7s;
 
