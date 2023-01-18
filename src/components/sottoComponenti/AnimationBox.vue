@@ -1,5 +1,5 @@
 <template>
-      <div id="animationBox">
+      <div v-scrollanimation id="animationBox">
 
 
             <ul class="container_icon1">
@@ -242,4 +242,17 @@ export default {
             opacity: 0;
       }
 }
+
+.before-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+  }
+  /* 
+    If the element intersects with the viewport, the before-enter class is added.
+  */
+  .enter {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 </style>

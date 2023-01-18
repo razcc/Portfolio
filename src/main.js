@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import App from './App.vue'
 import ScrollAnimation from './directives/scrollanimation'
+import ScrollAnimation2 from './directives/scroll2'
 
 
 /* import the fontawesome core */
@@ -23,6 +24,7 @@ library.add(faUserSecret, faChevronLeft, faChevronRight, faBars, faAnglesDown, g
 Vue.component('font-awesome-icon', FontAwesomeIcon)
 
 Vue.directive('scrollanimation', ScrollAnimation);
+Vue.directive('scroll2',ScrollAnimation2)
 
 
 Vue.config.productionTip = false

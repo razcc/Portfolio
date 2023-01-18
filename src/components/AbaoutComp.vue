@@ -2,7 +2,7 @@
       <div id="abaout">
 
             <!-- Img Cont -->
-            <div class="img_cont">
+            <div v-scrollanimation class="img_cont">
                   <div class="square"></div>
                   <img v-bind:src="require('../img/' + img)" alt="Immagine Profilo">
             </div>
@@ -10,7 +10,7 @@
 
 
             <!-- Descrizione -->
-            <div class="container_description">
+            <div v-scrollanimation class="container_description">
 
                   <!-- Introdduzione -->
                   <div class="introduction">
@@ -416,4 +416,17 @@ export default {
       border: 1px solid var(--text2) !important;
       background-color: black !important;
 }
+
+.before-enter {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+  }
+  /* 
+    If the element intersects with the viewport, the before-enter class is added.
+  */
+  .enter {
+    opacity: 1;
+    transform: scale(1);
+  }
 </style>

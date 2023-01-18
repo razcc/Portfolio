@@ -2,16 +2,16 @@
   <div id="app">
 
     <!-- NavBar COMP -->
-    <NavComp @emitScrol="emitScrolFunction" />
+    <NavComp  @emitScrol="emitScrolFunction" />
 
     <!-- Col SOCIAL  -->
-    <ColSocialFixed v-scrollanimation />
+    <ColSocialFixed />
 
 
     <!-- MAIN -->
     <main class="main">
       <AbaoutComp />
-      <AnimationBox :propsAnim="scrollPosition" />
+      <AnimationBox  :propsAnim="scrollPosition" />
       <SkillsComp />
       <ProjectsComp />
       <ContactComp />
@@ -108,4 +108,5 @@ export default {
 #app {
   background: var(--bg-body);
 }
+
 </style>

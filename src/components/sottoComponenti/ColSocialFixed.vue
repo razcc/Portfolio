@@ -1,6 +1,6 @@
 <template>
       <!-- ColLeft -->
-      <div class="col_social">
+      <div  v-scrollanimation class="col_social">
             <div class="down_elem">
                   <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-github" /></a>
                   <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-linkedin-in" /></a>
@@ -89,5 +89,17 @@ export default {
       }
 }
 
+.before-enter {
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+  }
+  /* 
+    If the element intersects with the viewport, the before-enter class is added.
+  */
+  .enter {
+    opacity: 1;
+    transform: translateX(0%);
+  }
 
 </style>

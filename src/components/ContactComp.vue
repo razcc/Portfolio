@@ -1,8 +1,8 @@
 <template>
       <div id="contact">
             <div class="col_left">
-                  <h2 v-scrollanimation>Get in touch</h2>
-                  <p v-scrollanimation>
+                  <h2 v-scroll2 >Get in touch</h2>
+                  <p v-scroll2>
                         I am currently looking for my first job to launch my career.
 
                         <br>
@@ -27,7 +27,7 @@
             </div>
 
             <!-- Form -->
-            <div class="container_form">
+            <div v-scrollanimation class="container_form">
                   <form class="form" @submit.prevent="sendEmail">
 
                         <label class="input_label">Name</label>
@@ -155,5 +155,31 @@ export default {
       }
 
 }
+
+.before-enter {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+  }
+  /* 
+    If the element intersects with the viewport, the before-enter class is added.
+  */
+  .enter {
+    opacity: 1;
+    transform: scale(1) rotate(360deg);
+  }
+
+  .before-enter2 {
+    opacity: 0;
+    transform: scale(0);
+    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+  }
+  /* 
+    If the element intersects with the viewport, the before-enter class is added.
+  */
+  .enter2{
+    opacity: 1;
+    transform: scale(1);
+  }
 
 </style>
