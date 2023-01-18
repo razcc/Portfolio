@@ -18,7 +18,7 @@
                               </div>
                               <div class="skill_cont">
                                     <span>Scss</span>
-                                    <img src="../img/2Css.png" alt="">
+                                    <img src="../img/scss.svg" alt="">
                               </div>
                               <div class="skill_cont">
                                     <span>Bootstrap</span>
@@ -71,7 +71,7 @@
 
                               <div class="skill_cont">
                                     <span>Mamp</span>
-                                    <img src="../img/2Css.png" alt="">
+                                    <img src="../img/Mamp.png" alt="">
                               </div>
                         </div>
                   </div>

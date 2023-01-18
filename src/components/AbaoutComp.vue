@@ -209,7 +209,7 @@ export default {
 
 <style lang="scss" scoped>
 #abaout {
-      margin-top: 10%;
+      padding-top: 10%;
       display: flex;
       flex-direction: column;
       align-items: center;
