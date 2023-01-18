@@ -149,7 +149,7 @@ export default {
 }
 
 
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 900px){
       #contact{
             display: flex;
       }

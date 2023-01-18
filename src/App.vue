@@ -13,10 +13,8 @@
       <AbaoutComp />
       <AnimationBox :propsAnim="scrollPosition" />
       <SkillsComp />
-      <!-- 
       <ProjectsComp />
-      -->
-      <ContactComp /> 
+      <ContactComp />
     </main>
 
 
@@ -31,7 +29,7 @@ import ColSocialFixed from './components/sottoComponenti/ColSocialFixed.vue';
 import AbaoutComp from './components/AbaoutComp.vue';
 import AnimationBox from './components/sottoComponenti/AnimationBox.vue';
 import SkillsComp from './components/SkillsComp.vue';
-// import ProjectsComp from './components/ProjectsComp.vue';
+import ProjectsComp from './components/ProjectsComp.vue';
 import ContactComp from './components/ContactComp.vue';
 
 
@@ -47,7 +45,7 @@ export default {
     AbaoutComp,
     AnimationBox,
     SkillsComp,
-    // ProjectsComp,
+    ProjectsComp,
     ContactComp,
 
 
@@ -110,5 +108,4 @@ export default {
 #app {
   background: var(--bg-body);
 }
-
 </style>
