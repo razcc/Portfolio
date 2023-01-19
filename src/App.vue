@@ -107,6 +107,7 @@ export default {
   box-sizing: border-box;
   scroll-behavior: smooth !important;
   font-family: 'Roboto Mono', monospace;
+  word-wrap: break-word;
 }
 
 // APP

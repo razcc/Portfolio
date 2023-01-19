@@ -146,7 +146,9 @@ a {
                         text-decoration-thickness: 2px;
                   }
 
-                  .mail {}
+                  .mail {
+                       
+                  }
 
 
             }

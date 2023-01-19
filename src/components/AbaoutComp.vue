@@ -380,6 +380,10 @@ export default {
 
                   }
 
+                  .profession{
+                        text-align: center;
+                  }
+
 
             }
 
