@@ -1,6 +1,7 @@
 <template>
       <section id="projects">
-            <h2>Projects I've worked on:</h2>
+            <h2 v-if="propsLingua == 'english'">Projects I've worked on:</h2>
+            <h2 v-else>Proggetti su cui ho lavorato</h2>
 
             <!-- Container -->
             <div class="slider">
@@ -29,6 +30,9 @@ import SixthProject from './projects/SixthProject.vue';
 
 export default {
       name: 'ProjectsComp',
+      props: {
+            propsLingua: String,
+      },
       components: {
             FirstProject,
             SecondProject,
@@ -49,9 +53,10 @@ export default {
 
 
       h2 {
-            font-size: 2rem;
+            font-size: 2.3rem;
             color: var(--text1);
-            margin-bottom: 1rem;
+            padding-bottom: 3rem;
+            text-shadow: 3px 3px 10px var(--lilla);
       }
 
       .slider {

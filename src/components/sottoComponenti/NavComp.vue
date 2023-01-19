@@ -2,24 +2,54 @@
       <!-- NavBar -->
       <!-- :class="{ 'navbar--hidden': !showNavbar }"  -->
       <!--  -->
-      <div  v-scrollanimation id="navComp">
+      <div v-scrollanimation id="navComp">
             <font-awesome-icon v-on:click="showNavbar = true" class="burger" icon="fa-solid fa-bars" />
 
             <nav :class="showNavbar ? 'show nav' : ' hidden nav'">
                   <ul>
                         <font-awesome-icon v-on:click="showNavbar = false" class="x" icon="fa-solid fa-x" />
-                        <li class="logo">Rafael Leonardi</li>
-                        <li>Abaut</li>
-                        <li>Skills</li>
-                        <li>Project</li>
-                        <li>Contact</li>
-                        <li class="resume">Resume</li>
+                        <li class="logo"> <a href="#app">Rafael Leonardi</a></li>
+
+                        <!-- Lingua -->
+                        <select v-model="linguaScelta" name="italiano" id="lingua">
+                              <option value="">Language</option>
+                              <option value="italiano">Italiano</option>
+                              <option value="english">English</option>
+                        </select>
+
+
+                        <!-- Inglese Menu -->
+                        <li v-if="linguaScelta == 'english'"> <a href="#app" v-on:click="showNavbar = false" class="nav_item_hover">About</a></li>
+                        <li v-if="linguaScelta == 'english'"> <a href="#skills" v-on:click="showNavbar = false" class="nav_item_hover">Skills</a></li>
+                        <li v-if="linguaScelta == 'english'"> <a href="#projects" v-on:click="showNavbar = false" class="nav_item_hover">Project</a></li>
+                        <li v-if="linguaScelta == 'english'"> <a href="#contact" v-on:click="showNavbar = false" class="nav_item_hover">Contact</a></li>
+                        <li v-if="linguaScelta == 'english'" class="resume">
+                              <a href="./assets/resume.pdf" target="_blank" v-on:click="showNavbar = false">Resume</a>
+                        </li>
+
+                        <!-- Italiano Menu -->
+                        <li v-if="linguaScelta == 'italiano'"> <a href="#app" v-on:click="showNavbar = false" class="nav_item_hover">Chi sono</a></li>
+                        <li v-if="linguaScelta == 'italiano'"> <a href="#skills" v-on:click="showNavbar = false" class="nav_item_hover">Competenze</a></li>
+                        <li v-if="linguaScelta == 'italiano'"> <a href="#projects" v-on:click="showNavbar = false" class="nav_item_hover">Progetti</a></li>
+                        <li v-if="linguaScelta == 'italiano'"> <a href="#contact" v-on:click="showNavbar = false" class="nav_item_hover">Contattami</a></li>
+                        <li v-if="linguaScelta == 'italiano'" class="resume">
+                              <a href="./assets/resume.pdf" target="_blank" v-on:click="showNavbar = false">Resume</a>
+                        </li>
+
+                        <!-- Social Media -->
                         <div class="social_media">
-                              <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-github" /></a>
-                              <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-linkedin-in" /></a>
-                              <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-codepen" /></a>
-                              <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-instagram" /></a>
+                              <a target="_blank" href="https://github.com/razcc"><font-awesome-icon class="icon"
+                                          icon="fa-brands fa-github" /></a>
+                              <a target="_blank"
+                                    href="https://www.linkedin.com/in/rafael-leonardi-a667b4215/"><font-awesome-icon
+                                          class="icon" icon="fa-brands fa-linkedin-in" /></a>
+                              <a target="_blank" href="https://codepen.io/your-work/"><font-awesome-icon class="icon"
+                                          icon="fa-brands fa-codepen" /></a>
+                              <a target="_blank" href="https://www.instagram.com/rafa_leonardi/"><font-awesome-icon
+                                          class="icon" icon="fa-brands fa-instagram" /></a>
                         </div>
+
+
                   </ul>
             </nav>
       </div>
@@ -36,10 +66,16 @@ export default {
             return {
                   showNavbar: false,
                   lastScrollPosition: 0,
+                  linguaScelta: 'english'
+
             }
       },
+      created() {
+            this.$emit("emitLingua", this.linguaScelta);
+      },
       mounted() {
-            window.addEventListener('scroll', this.onScroll)
+            window.addEventListener('scroll', this.onScroll);
+
       },
       beforeDestroy() {
             window.removeEventListener('scroll', this.onScroll)
@@ -52,18 +88,27 @@ export default {
                   if (currentScrollPosition < 0) {
                         return
                   }
-                 
+
                   // Set the current scroll position as the last scroll position
                   this.lastScrollPosition = currentScrollPosition;
                   this.$emit("emitScrol", this.lastScrollPosition);
             },
 
+
       },
+      updated(){
+            this.$emit("emitLingua", this.linguaScelta);
+      }
 
 }
 </script>
 
 <style lang="scss" scoped>
+a {
+      text-decoration: none;
+      color: var(--text1);
+}
+
 #navComp {
       color: var(--text1);
       display: flex;
@@ -95,25 +140,72 @@ export default {
             height: 100%;
             width: 100%;
             background-color: var(--bg-body2);
-            font-size: 2rem;
+            font-size: 1.5rem;
             transition: all 1s;
 
             ul {
                   height: 100%;
-                  width: 100%;
                   display: flex;
                   flex-direction: column;
-                  justify-content: space-around;
+                  line-height: 5.5rem;
                   align-items: center;
+                  position: relative;
 
                   .logo {
-                        font-family: 'Rancho', cursive;
+                        font-size: 1.6rem;
+                        font-weight: 700;
+                        text-shadow: 4px 4px 10px #5a168a;
                   }
 
 
 
                   li {
                         list-style-type: none;
+                        transition: all .7s;
+
+                        &:hover {
+                              text-shadow: 5px 5px 10px var(--lilla);
+                              transform: scale(1.2);
+                        }
+
+                        .nav_item_hover {
+                              position: relative;
+                              transition: all .8s;
+
+
+
+                              &::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 50%;
+                                    bottom: 0;
+                                    width: 0;
+                                    height: 2px;
+                                    background-color: var(--lilla);
+                                    transition: all .7s;
+                              }
+
+                              &:hover::before {
+                                    width: 50%;
+                              }
+
+                              &::after {
+                                    content: '';
+                                    position: absolute;
+                                    left: 50%;
+                                    bottom: 0;
+                                    width: 0;
+                                    height: 2px;
+                                    background-color: var(--lilla);
+                                    transition: all .7s;
+                                    transform: translateX(-50%);
+                              }
+
+                              &:hover::after {
+                                    width: 100%;
+
+                              }
+                        }
 
                   }
 
@@ -121,17 +213,26 @@ export default {
                         width: 100%;
                         display: flex;
                         justify-content: space-around;
+
+                        .icon {
+                              color: var(--lilla);
+                        }
+
                   }
 
                   .resume {
-                        border: 1px solid var(--text1);
-                        border-radius: 10px;
-                        padding: .7rem;
-                        transition: all 1s;
 
-                        &:hover {
-                              background-color: var(--hover-links);
+                        a {
 
+                              border: 1px solid var(--text1);
+                              border-radius: 10px;
+                              padding: .7rem;
+                              transition: all 1s;
+
+                              &:hover {
+                                    background-color: var(--hover-links);
+
+                              }
                         }
                   }
 
@@ -147,6 +248,31 @@ export default {
                               transform: scale(1.2);
                         }
                   }
+
+
+                  #lingua {
+
+                        border-radius: 20px;
+                        padding: 10px;
+                        background-color: var(--lilla);
+                        box-shadow: 3px 3px 6px var(--purple-scuro);
+                        color: var(--text1);
+                        transition: all .6s;
+                        border: none;
+                        color: black;
+
+                        option {
+                              cursor: pointer;
+                        }
+
+
+                        &:hover {
+
+                              cursor: pointer;
+                        }
+                  }
+
+
             }
 
       }
@@ -161,7 +287,8 @@ export default {
 
 }
 
-@media screen and (min-width: 621px) {
+
+@media screen and (min-width: 1075px) {
       #navComp {
             display: block;
       }
@@ -190,6 +317,10 @@ export default {
 
                   }
 
+                  #lingua {
+                        position: absolute;
+                        right: 5%;
+                  }
 
             }
 
@@ -202,26 +333,7 @@ export default {
       .x {
             display: none;
       }
-}
 
-@media screen and (min-width: 1000px) {
-      .nav {
-            font-size: 1.5rem !important;
-
-      }
 
 }
-
-.before-enter {
-    opacity: 0;
-    transform: translateX(-100%);
-    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
-  }
-  /* 
-    If the element intersects with the viewport, the before-enter class is added.
-  */
-  .enter {
-    opacity: 1;
-    transform: translateX(0%);
-  }
 </style>

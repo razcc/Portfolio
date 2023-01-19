@@ -48,7 +48,7 @@ export default {
                   left: 50%;
                   height: 100px;
                   width: 2px;
-                  background-color: var(--text1);
+                  background-color: var(--lilla);
                   transform: translateX(-50%);
             }
 
@@ -60,7 +60,7 @@ export default {
                   left: 50%;
                   height: 30px;
                   width: 2px;
-                  background-color: var(--text1);
+                  background-color: var(--lilla);
                   transform: translateX(-50%) translateY(-130%);
             }
 
@@ -83,15 +83,15 @@ export default {
       }
 }
 
-@media screen and (max-width: 621px){
+@media screen and (max-width: 1070px){
       .col_social{
-            transform: translateX(-120%);
+            transform: translateX(-120%) !important;
       }
 }
 
 .before-enter {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: translateY(-100%);
     transition: all 1s cubic-bezier(.41,.01,.57,1.61);
   }
   /* 
@@ -99,7 +99,7 @@ export default {
   */
   .enter {
     opacity: 1;
-    transform: translateX(0%);
+    transform: translateY(0%);
   }
 
 </style>

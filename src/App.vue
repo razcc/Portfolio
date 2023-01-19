@@ -2,7 +2,7 @@
   <div id="app">
 
     <!-- NavBar COMP -->
-    <NavComp  @emitScrol="emitScrolFunction" />
+    <NavComp @emitScrol="emitScrolFunction" @emitLingua="linguaFunction" />
 
     <!-- Col SOCIAL  -->
     <ColSocialFixed />
@@ -10,11 +10,11 @@
 
     <!-- MAIN -->
     <main class="main">
-      <AbaoutComp />
-      <AnimationBox  :propsAnim="scrollPosition" />
-      <SkillsComp />
-      <ProjectsComp />
-      <ContactComp />
+      <AbaoutComp :propsLingua ="linguaScelta"/>
+      <AnimationBox :propsAnim="scrollPosition" />
+      <SkillsComp :propsLingua ="linguaScelta" />
+      <ProjectsComp  :propsLingua ="linguaScelta"/>
+      <ContactComp :propsLingua ="linguaScelta"/>
     </main>
 
 
@@ -54,12 +54,16 @@ export default {
     return {
       // Dato da passare con Props
       scrollPosition: 0,
+      linguaScelta: ""
     }
   },
   methods: {
     // Funzione Emit dato preso da Nav Comp
     emitScrolFunction(emitvValore) {
       this.scrollPosition = emitvValore;
+    },
+    linguaFunction(lingua){
+      this.linguaScelta=lingua;
     }
   }
 
@@ -74,8 +78,9 @@ export default {
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rancho&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;700&family=Space+Grotesk&display=swap');
 
-@import './assets/mixin/mixin';
+@import './mixin/mixin.css';
 
 // SCROLL BAR
 ::-webkit-scrollbar {
@@ -83,11 +88,11 @@ export default {
 }
 
 ::-webkit-scrollbar-track {
-  background: #9b9797;
+  background: var(--lilla);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: rgb(31, 27, 80);
+  background: var(--verde-scuro);
   border-radius: 100px;
 }
 
@@ -101,12 +106,13 @@ export default {
   padding: 0;
   box-sizing: border-box;
   scroll-behavior: smooth !important;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 
 // APP
 #app {
-  background: var(--bg-body);
+  background: var(--verde-scuro);
+  font-family: 'Space Grotesk', sans-serif;
+  ;
 }
-
 </style>

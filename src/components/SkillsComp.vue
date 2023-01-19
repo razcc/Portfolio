@@ -82,7 +82,10 @@
 
 <script>
 export default {
-      name: "SkillsComp"
+      name: "SkillsComp",
+      props: {
+            propsLingua: String,
+      },
 }
 </script>
 
@@ -95,8 +98,9 @@ img {
       color: var(--text1);
 
       .skills_title {
-            font-size: 2rem;
+            font-size: 2.3rem;
             text-align: center;
+            text-shadow: 3px 3px 10px var(--lilla);
 
       }
 
@@ -105,8 +109,10 @@ img {
 
 
             h2 {
+                 
+                  font-size: 2rem;
                   text-align: center;
-                  padding: 2rem 0;
+                  padding: 4rem 0 2rem 0;
             }
 
             .allSkill_cont {
@@ -123,8 +129,7 @@ img {
                         font-size: 2rem;
                         font-weight: bold;
                         font-style: italic;
-                        text-decoration: underline;
-                        text-decoration-color: var(--accent);
+                        text-shadow: 3px 3px 10px var(--lilla);
                         margin-bottom: 6rem;
                   }
             }
@@ -148,8 +153,9 @@ img {
 
 
             h2 {
+                  font-size: 2rem;
                   text-align: center;
-                  padding: 2rem 0;
+                  padding: 4rem 0 2rem 0;
             }
 
             .allSkill_cont {
@@ -166,8 +172,7 @@ img {
                         font-size: 2rem;
                         font-weight: bold;
                         font-style: italic;
-                        text-decoration: underline;
-                        text-decoration-color: var(--accent);
+                        text-shadow: 3px 3px 10px var(--lilla);
                         margin-bottom: 6rem;
                   }
             }
@@ -189,29 +194,29 @@ img {
       }
 }
 
-.before-enter {
-    opacity: 0;
-    transform: scale(0) rotate(0deg);
-    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
-  }
-  /* 
-    If the element intersects with the viewport, the before-enter class is added.
-  */
-  .enter {
-    opacity: 1;
-    transform: scale(1) rotate(360deg);
-  }
+// .before-enter {
+//     opacity: 0;
+//     transform: scale(0) rotate(0deg);
+//     transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+//   }
+//   /* 
+//     If the element intersects with the viewport, the before-enter class is added.
+//   */
+//   .enter {
+//     opacity: 1;
+//     transform: scale(1) rotate(360deg);
+//   }
 
-  .before-enter2 {
-    opacity: 0;
-    transform: scale(0);
-    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
-  }
-  /* 
-    If the element intersects with the viewport, the before-enter class is added.
-  */
-  .enter2{
-    opacity: 1;
-    transform: scale(1);
-  }
+//   .before-enter2 {
+//     opacity: 0;
+//     transform: scale(0);
+//     transition: all 1s cubic-bezier(.41,.01,.57,1.61);
+//   }
+//   /* 
+//     If the element intersects with the viewport, the before-enter class is added.
+//   */
+//   .enter2{
+//     opacity: 1;
+//     transform: scale(1);
+//   }
 </style>

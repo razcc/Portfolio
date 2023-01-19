@@ -2,15 +2,21 @@
 
 :root {
       --bg-body: #141414;
-      --bg-body2: #242424;
-      --col-transparent: #24242449;
+      --bg-body2: #21403c;
+      --col-transparent: #21403c3c;
       --accent: #4ce19e;
       --text1: #ffffff;
-      --text2: #d9d9d9;
+      --text2: #d9d9d98d;
       --invalid: hsl(7, 100%, 68%);
       --hover-links: #A0857C;
 
+      --purple-scuro: #482E5B;
+      --purple: #715C83;
+      --lilla: #9079A3;
 
+      --verde-scuro: #213734;
+      --verde-olivo: #324742;
+      --verde-scuro-pastello: #536863;
 
       --fs-18: 1.125rem;
       --fs-88: 5.5rem;
