@@ -58,13 +58,13 @@
                   <form class="form" @submit.prevent="sendEmail">
 
                         <label class="input_label">Name</label>
-                        <input class="input" type="text" v-model="name" name="name" placeholder="Your Name">
+                        <input required class="input" type="text" v-model="name" name="name" placeholder="Your Name">
 
                         <label class="input_label">Email</label>
-                        <input class="input" type="email" v-model="email" name="email" placeholder="Your Email">
+                        <input required class="input" type="email" v-model="email" name="email" placeholder="Your Email">
 
                         <label class="input_label">Message</label>
-                        <textarea class="input" name="message" v-model="message" cols="30" rows="5"
+                        <textarea required class="input" name="message" v-model="message" cols="30" rows="5"
                               placeholder="Message"></textarea>
 
                         <input class="submit" type="submit" value="Send">
@@ -103,6 +103,9 @@ export default {
                   this.email = ''
                   this.message = ''
             },
+            mostraPopUp() {
+                  window.alert("Email inviata Corettamente");
+            }
       }
 }
 </script>
@@ -113,7 +116,8 @@ a {
       text-decoration-color: var(--lilla);
       color: var(--text1);
       transition: all .7s;
-      &:hover{
+
+      &:hover {
             font-size: 1.5rem;
       }
 }
@@ -146,9 +150,7 @@ a {
                         text-decoration-thickness: 2px;
                   }
 
-                  .mail {
-                       
-                  }
+                  .mail {}
 
 
             }
