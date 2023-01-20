@@ -131,6 +131,7 @@ export default {
 
             #col_left {
                   width: 100%;
+                  height: 50vh;
                   padding-top: 20px;
 
                   .immaginePrincipale {
@@ -141,7 +142,7 @@ export default {
 
             #col_right {
                   width: 100%;
-                  height: 75px;
+                  height: 100px;
                   display: flex;
                   gap: 20px;
 
