@@ -3,26 +3,43 @@
             <h2 v-if="propsLingua == 'english'">Projects I've worked on:</h2>
             <h2 v-else>Proggetti su cui ho lavorato</h2>
 
-            <!-- Container -->
             <div class="slider">
-                  <FirstProject />
-                  <SecondProject />
-                  <ThirdProject />
-                  <FourthProject />
-                  <FifthProject />
-                  <SixthProject />
+                  <div id="col_left">
+                        <img class="immaginePrincipale" :src="imgArray[indice]" alt="ImmaginePrincipale">
+                  </div>
+
+                  <!-- ^Immagine antemprima lato destro -->
+                  <div id="col_right">
+
+                        <!-- img 1 -->
+                        <div class="cont_anteprima">
+                              <img class="imgAnteprima" :src="img1" alt="Project 1">
+                        </div>
+
+                        <!-- img 2 -->
+                        <div class="cont_anteprima">
+                              <img class="imgAnteprima" :src="img2" alt="Project 2">
+                        </div>
+
+                        <!-- img 3 -->
+                        <div class="cont_anteprima">
+                              <img class="imgAnteprima" :src="img3" alt="Project 3">
+                        </div>
+
+                        <!-- img 4 -->
+                        <div class="cont_anteprima imgFondo">
+                              <img class="imgAnteprima" :src="img4" alt="Project 4">
+                        </div>
+                  </div>
             </div>
+
+
 
       </section>
 </template>
 
 <script>
-import FirstProject from './projects/FirstProject.vue';
-import SecondProject from './projects/SecondProject.vue';
-import ThirdProject from './projects/ThirdProject.vue';
-import FourthProject from './projects/FourthProject.vue';
-import FifthProject from './projects/FifthProject.vue';
-import SixthProject from './projects/SixthProject.vue';
+
 
 
 
@@ -30,101 +47,120 @@ import SixthProject from './projects/SixthProject.vue';
 
 export default {
       name: 'ProjectsComp',
+
       props: {
             propsLingua: String,
       },
-      components: {
-            FirstProject,
-            SecondProject,
-            ThirdProject,
-            FourthProject,
-            FifthProject,
-            SixthProject
+      data() {
+            return {
+                  img1: "/assets/prj1.png",
+                  img2: "/assets/prj2.png",
+                  img3: "/assets/prj1.png",
+                  img4: "/assets/prj2.png",
+
+                  imgArray: [
+                        "/assets/prj1.png",
+                        "/assets/prj2.png",
+                        "/assets/prj1.png",
+                        "/assets/prj2.png",
+                  ],
+                  indice: 0,
+                  classeVariabile: "",
+            }
       },
+      mounted() {
+            //Entra in gioco qunaod l'applicativo vueha caricato l'elemento #root
+            this.attivaFunzione()
+      },
+      methods: {
+            getPhoto() {
+                  return '../img/prj1.png';
+            },
+            Img1Selection: function (index) {
+                  this.indice = index
+
+            },
+
+
+            arrowDown: function () {
+                  let lunghezza = this.imgArray.length - 1;
+                  console.log(lunghezza)
+
+                  if (this.indice >= lunghezza) {
+                        return this.indice = 0;
+
+                  } else {
+                        return this.indice++;
+
+
+                  }
+            },
+            arrowUP: function () {
+                  let lunghezza = this.imgArray.length - 1;
+                  console.log(lunghezza)
+
+                  console.log(this.indice)
+                  if (this.indice > lunghezza) {
+                        return this.indice = 0;
+
+                  } else if (this.indice == 0) {
+                        return this.indice = lunghezza;
+                  } else {
+                        return this.indice--;
+                  }
+            },
+            attivaFunzione() {
+                  setInterval(() => { this.arrowDown() }, 4000)
+            }
+
+
+      },
+
+
 }
 </script>
 
 <style lang="scss" scoped>
 #projects {
-
       text-align: center;
-      padding: 5% 5% 0 10%;
-
-
-
-      h2 {
-            font-size: 2.3rem;
-            color: var(--text1);
-            padding-bottom: 3rem;
-            text-shadow: 3px 3px 10px var(--lilla);
-      }
+      color: var(--text1);
 
       .slider {
             width: 100%;
-            height: 100%;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 2rem;
-
-            .project {
-                  overflow: hidden;
-                  cursor: pointer;
-                  width: 100%;
-                  height: 200px;
-                  position: relative;
-
-
-            }
-
-      }
-
-
-}
-@media screen and (min-width: 600px){
-      .project{
-            width: calc(100% /2 - 2rem) !important;
-      }
-
-}
-
-@media screen and (min-width: 900px) {
-
-      .slider {
             
 
+            #col_left {
+                  width: 100%;
+                  padding-top: 20px;
 
-
-            .project {
-                  width: calc(100% /3 - 2rem) !important;
+                  .immaginePrincipale {
+                        width: 100%;
+                  }
 
             }
 
+            #col_right {
+                  width: 100%;
+                  height: 75px;
+                  display: flex;
+                  gap: 20px;
+
+
+                  .cont_anteprima {
+                        width: calc(100% / 4 - 10px);
+
+                        .imgAnteprima {
+                              width: 100%;
+
+                        }
+
+                  }
+
+            }
+
+
       }
 
-}
 
-@keyframes rotate {
-      0% {
-            transform: perspective(1000px) rotateY(0deg);
-      }
-
-      100% {
-            transform: perspective(1000px) rotateY(360deg);
-      }
-}
-
-.before-enter {
-      opacity: 0;
-      transform: scale(0);
-      transition: all 1s;
-      transition-delay: 0.2s;
-}
-
-/* 
-    If the element intersects with the viewport, the before-enter class is added.
-  */
-.enter {
-      opacity: 1;
-      transform: scale(1);
 }
 </style>
