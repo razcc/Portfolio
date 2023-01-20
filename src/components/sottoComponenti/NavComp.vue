@@ -1,7 +1,7 @@
 <template>
       <!-- NavBar -->
-      <!-- :class="{ 'navbar--hidden': !showNavbar }"  -->
-      <!--  -->
+      <!--   -->
+      <!--  :class="{ 'hiddenDesktop': showNavbar }" -->
       <div v-scrollanimation id="navComp">
             <font-awesome-icon v-on:click="showNavbar = true" class="burger" icon="fa-solid fa-bars" />
 
@@ -12,28 +12,37 @@
 
                         <!-- Lingua -->
                         <select v-model="linguaScelta" name="italiano" id="lingua">
-                              <option value="">Language</option>
                               <option value="italiano">Italiano</option>
                               <option value="english">English</option>
                         </select>
 
 
                         <!-- Inglese Menu -->
-                        <li v-if="linguaScelta == 'english'"> <a href="#app" v-on:click="showNavbar = false" class="nav_item_hover">About</a></li>
-                        <li v-if="linguaScelta == 'english'"> <a href="#skills" v-on:click="showNavbar = false" class="nav_item_hover">Skills</a></li>
-                        <li v-if="linguaScelta == 'english'"> <a href="#projects" v-on:click="showNavbar = false" class="nav_item_hover">Project</a></li>
-                        <li v-if="linguaScelta == 'english'"> <a href="#contact" v-on:click="showNavbar = false" class="nav_item_hover">Contact</a></li>
+                        <li v-if="linguaScelta == 'english'"> <a href="#app" v-on:click="showNavbar = false"
+                                    class="nav_item_hover">About</a></li>
+                        <li v-if="linguaScelta == 'english'"> <a href="#skills" v-on:click="showNavbar = false"
+                                    class="nav_item_hover">Skills</a></li>
+                        <li v-if="linguaScelta == 'english'"> <a href="#projects" v-on:click="showNavbar = false"
+                                    class="nav_item_hover">Project</a></li>
+                        <li v-if="linguaScelta == 'english'"> <a href="#contact" v-on:click="showNavbar = false"
+                                    class="nav_item_hover">Contact</a></li>
                         <li v-if="linguaScelta == 'english'" class="resume">
-                              <a href="./assets/resume.pdf" target="_blank" v-on:click="showNavbar = false">Resume</a>
+                              <a href="./assets/Rafael-LeonardiCV.pdf" target="_blank"
+                                    v-on:click="showNavbar = false">Resume</a>
                         </li>
 
                         <!-- Italiano Menu -->
-                        <li v-if="linguaScelta == 'italiano'"> <a href="#app" v-on:click="showNavbar = false" class="nav_item_hover">Chi sono</a></li>
-                        <li v-if="linguaScelta == 'italiano'"> <a href="#skills" v-on:click="showNavbar = false" class="nav_item_hover">Competenze</a></li>
-                        <li v-if="linguaScelta == 'italiano'"> <a href="#projects" v-on:click="showNavbar = false" class="nav_item_hover">Progetti</a></li>
-                        <li v-if="linguaScelta == 'italiano'"> <a href="#contact" v-on:click="showNavbar = false" class="nav_item_hover">Contattami</a></li>
+                        <li v-if="linguaScelta == 'italiano'"> <a href="#app" v-on:click="showNavbar = false"
+                                    class="nav_item_hover">Chi sono</a></li>
+                        <li v-if="linguaScelta == 'italiano'"> <a href="#skills" v-on:click="showNavbar = false"
+                                    class="nav_item_hover">Competenze</a></li>
+                        <li v-if="linguaScelta == 'italiano'"> <a href="#projects" v-on:click="showNavbar = false"
+                                    class="nav_item_hover">Progetti</a></li>
+                        <li v-if="linguaScelta == 'italiano'"> <a href="#contact" v-on:click="showNavbar = false"
+                                    class="nav_item_hover">Contattami</a></li>
                         <li v-if="linguaScelta == 'italiano'" class="resume">
-                              <a href="./assets/resume.pdf" target="_blank" v-on:click="showNavbar = false">Resume</a>
+                              <a href="./assets/Rafael-LeonardiCV.pdf" target="_blank"
+                                    v-on:click="showNavbar = false">Resume</a>
                         </li>
 
                         <!-- Social Media -->
@@ -89,6 +98,9 @@ export default {
                         return
                   }
 
+                  // // Here we determine whether we need to show or hide the navbar
+                  // this.showNavbar = currentScrollPosition < this.lastScrollPosition
+
                   // Set the current scroll position as the last scroll position
                   this.lastScrollPosition = currentScrollPosition;
                   this.$emit("emitScrol", this.lastScrollPosition);
@@ -96,7 +108,7 @@ export default {
 
 
       },
-      updated(){
+      updated() {
             this.$emit("emitLingua", this.linguaScelta);
       }
 
@@ -230,7 +242,8 @@ a {
                               transition: all 1s;
 
                               &:hover {
-                                    background-color: var(--hover-links);
+                                    background-color: var(--lilla);
+                                    border: none;
 
                               }
                         }
@@ -254,21 +267,21 @@ a {
 
                         border-radius: 20px;
                         padding: 10px;
-                        background-color: var(--lilla);
-                        box-shadow: 3px 3px 6px var(--purple-scuro);
+                        background-color: transparent;
                         color: var(--text1);
                         transition: all .6s;
-                        border: none;
-                        color: black;
+                        border: 1px solid var(--text1);
 
                         option {
                               cursor: pointer;
+                              background-color: var(--lilla);
+                              padding: 0;
                         }
 
 
                         &:hover {
-
                               cursor: pointer;
+                              background-color: var(--lilla);
                         }
                   }
 
@@ -289,6 +302,7 @@ a {
 
 
 @media screen and (min-width: 1075px) {
+   
       #navComp {
             display: block;
       }

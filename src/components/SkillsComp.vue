@@ -1,11 +1,11 @@
 <template>
       <div id="skills">
-            <h2 v-scroll2 class="skills_title">Full Stack Web Developer Skills</h2>
+            <h2 class="skills_title">Full Stack Web Developer Skills</h2>
 
             <div class="container">
 
                   <div class="front_end">
-                        <h2 v-scroll2>Front End Skills</h2>
+                        <h2>Front End Skills</h2>
 
                         <div class="allSkill_cont">
                               <div v-scrollanimation class="skill_cont">
@@ -40,7 +40,7 @@
                   </div>
 
                   <!-- Center -->
-                  <div v-scroll2 class="center">
+                  <div class="center">
                         <div class="npm">NPM Package Manager</div>
 
                         <div>
@@ -57,7 +57,7 @@
 
                   <!-- Right -->
                   <div class="back_end">
-                        <h2 v-scroll2>Back End Skills</h2>
+                        <h2>Back End Skills</h2>
 
                         <div class="allSkill_cont">
                               <div v-scrollanimation class="skill_cont">
@@ -109,7 +109,7 @@ img {
 
 
             h2 {
-                 
+
                   font-size: 2rem;
                   text-align: center;
                   padding: 4rem 0 2rem 0;
@@ -173,7 +173,7 @@ img {
                         font-weight: bold;
                         font-style: italic;
                         text-shadow: 3px 3px 10px var(--lilla);
-                        margin-bottom: 6rem;
+
                   }
             }
 
@@ -194,29 +194,27 @@ img {
       }
 }
 
-// .before-enter {
-//     opacity: 0;
-//     transform: scale(0) rotate(0deg);
-//     transition: all 1s cubic-bezier(.41,.01,.57,1.61);
-//   }
-//   /* 
-//     If the element intersects with the viewport, the before-enter class is added.
-//   */
-//   .enter {
-//     opacity: 1;
-//     transform: scale(1) rotate(360deg);
-//   }
+.before-enter {
+      opacity: 0;
+      transform: scale(0);
+      transition: all 1s;
+}
 
-//   .before-enter2 {
-//     opacity: 0;
-//     transform: scale(0);
-//     transition: all 1s cubic-bezier(.41,.01,.57,1.61);
-//   }
-//   /* 
-//     If the element intersects with the viewport, the before-enter class is added.
-//   */
-//   .enter2{
-//     opacity: 1;
-//     transform: scale(1);
-//   }
+.enter {
+      opacity: 1;
+      transform: scale(1);
+}
+
+// -------------------------
+.before-enter2 {
+      opacity: 0;
+      transform: scale(0);
+      transition: all 1s;
+      transition-delay: .1s;
+}
+
+.enter2 {
+      opacity: 1;
+      transform: scale(1);
+}
 </style>

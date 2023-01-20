@@ -17,25 +17,25 @@
                   </div>
 
                   <!-- Right -->
-                  <div id="col_right">
+                  <div  id="col_right">
 
                         <!-- img 1 -->
-                        <div class="cont_anteprima">
+                        <div v-scrollanimation class="cont_anteprima">
                               <img class="imgAnteprima" :src="img1" alt="Project 1">
                         </div>
 
                         <!-- img 2 -->
-                        <div class="cont_anteprima">
+                        <div v-scrollanimation class="cont_anteprima">
                               <img class="imgAnteprima" :src="img2" alt="Project 2">
                         </div>
 
                         <!-- img 3 -->
-                        <div class="cont_anteprima">
+                        <div v-scrollanimation class="cont_anteprima">
                               <img class="imgAnteprima" :src="img3" alt="Project 3">
                         </div>
 
                         <!-- img 4 -->
-                        <div class="cont_anteprima imgFondo">
+                        <div v-scrollanimation class="cont_anteprima imgFondo">
                               <img class="imgAnteprima" :src="img4" alt="Project 4">
                         </div>
                   </div>
@@ -125,28 +125,33 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
+      height: 100vh;
       text-align: center;
       color: var(--text1);
       margin-top: 20px;
 
       h2 {
             font-weight: bold;
-            padding-top: 5%;
             font-size: 2.3rem;
             text-align: center;
             text-shadow: 3px 3px 10px var(--lilla);
+            height: 10%;
+            padding-top: 5%;
       }
 
       .slider {
             display: flex;
             flex-direction: column;
+            height: 90%;
+            margin-top: 5%;
 
 
 
             #col_left {
-                  width: 100%;
-                  height: 60vh;
-                  padding: 1.5rem 1rem .5rem 1rem;
+                  width: 80%;
+                  align-self: center;
+                  height: 60%;
+
                   position: relative;
 
                   .immaginePrincipale {
@@ -157,11 +162,13 @@ export default {
             }
 
             #col_right {
-                  width: 100%;
-                  height: 100px;
+                  width: 75%;
+                  align-self: center;
+                  padding-top: 25px;
+                  height: 20%;
                   display: flex;
                   gap: 10px;
-                  padding: 0 1rem;
+
 
 
                   .cont_anteprima {
@@ -184,12 +191,13 @@ export default {
                   top: 50%;
                   transform: translateY(-50%);
                   font-size: 3rem;
-                  background-color:  rgba(0, 0, 0, 0.596);
+                  background-color: rgba(0, 0, 0, 0.596);
                   padding: 1rem;
                   color: var(--text1);
                   cursor: pointer;
                   transition: all .7s;
-                  &:hover{
+
+                  &:hover {
                         border: 1px solid black;
                         color: black;
                         background-color: var(--lilla);
@@ -207,7 +215,8 @@ export default {
                   color: var(--text1);
                   cursor: pointer;
                   transition: all .7s;
-                  &:hover{
+
+                  &:hover {
                         border: 1px solid black;
                         color: black;
                         background-color: var(--lilla);
@@ -229,5 +238,16 @@ export default {
             }
 
       }
+}
+
+.before-enter {
+      opacity: 0;
+      transform: scale(0);
+      transition: all 1s;
+}
+
+.enter {
+      opacity: 1;
+      transform: scale(1);
 }
 </style>

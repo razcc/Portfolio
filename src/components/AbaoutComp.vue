@@ -2,15 +2,15 @@
       <div id="abaout">
 
             <!-- Img Cont -->
-            <div v-scrollanimation class="img_cont">
-                  <div class="square"></div>
-                  <img v-bind:src="require('../img/' + img)" alt="Immagine Profilo">
+            <div class="img_cont">
+                  <div v-scroll2 class="square"></div>
+                  <img v-scrollanimation v-bind:src="require('../img/' + img)" alt="Immagine Profilo">
             </div>
 
 
 
             <!-- Descrizione -->
-            <div v-scrollanimation class="container_description">
+            <div class="container_description">
 
                   <!-- Introdduzione -->
                   <div class="introduction">
@@ -39,23 +39,25 @@
                   </div>
 
 
-                  <!-- Descrizione -->
                   <div class="description">
 
                         <!-- ITALIANO---------------------------- -->
                         <!-- descrizione PASSATO 2 -->
-                        <div v-if="propsLingua == 'italiano'" class="past_cont" :class="(marcatore == 1) ? 'displayOn' : 'displayOff'">
+                        <div v-if="propsLingua == 'italiano'" class="past_cont"
+                              :class="(marcatore == 1) ? 'displayOn' : 'displayOff'">
                               <h2>Il mio Passato:</h2>
+                              <br>
                               <span>
                                     La mia storia parte a scuola dove ho studiato informatica
                                     e posso proprio dire che in quel periodo mi sentivo obbligato a fare le cose.
 
                                     Durante gli studi ho cominciato a lavorare al McDonald per guadagnarmi la mia
-                                    indipendenza ma dopo la scuola ho cercato la mia strada decidendo di cambiare direzione,
+                                    indipendenza ma dopo la scuola ho cercato la mia strada decidendo di cambiare
+                                    direzione,
                                     andando a fare l'aiuto cuoco.
                                     <br>
                                     Ed è proprio quando mi stavo adagiando in quel mondo accontentandomi, che
-                                    mi sono reso conto di volere di più, che volevo <span class="accent">cambiare</span> 
+                                    mi sono reso conto di volere di più, che volevo <span class="accent">cambiare</span>
                                     la mia vita.
                                     <br>
                                     Ho lasciato il posto fisso per cominciare a viaggiare
@@ -67,21 +69,22 @@
                         </div>
 
                         <!-- PRESENTE -->
-                        <div v-if="propsLingua == 'italiano'" class="present_cont" :class="(marcatore == 2) ? 'displayOn' : 'displayOff'">
+                        <div v-if="propsLingua == 'italiano'" class="present_cont"
+                              :class="(marcatore == 2) ? 'displayOn' : 'displayOff'">
                               <span>
                                     Negli ultimi 8-9 mesi ho affrontato un percorso formativo professionale come
-                                    WebDeveloper. 
+                                    WebDeveloper.
                                     <br>
                                     Ho cominciato la formazione in autonomia, per un paio di mesi, prima di
-                                    iscrivermi a <span class="accent">Boolean</span>. 
+                                    iscrivermi a <span class="accent">Boolean</span>.
                                     <br>
                                     Le risorse gratis nel Web sono tante ma ho avuto l'occasione di accelerare i
                                     tempi di apprendimento, affidandomi ad una azienda di professionisti
-                                    con un percorso gia ben definito. 
+                                    con un percorso gia ben definito.
                                     <br>
                                     Ho avuto modo di affrontare numerosi progetti, ognuno con difficolta
                                     specifiche, partendo dal front-end fino ad arrivare al back-end e la gestione
-                                    dei dati. 
+                                    dei dati.
                                     <br>
                                     E come montando un puzzle i pezzi si incastrano pian paino, ho aumentato la
                                     mia conoscenza un passo alla volta.
@@ -93,8 +96,10 @@
                         </div>
 
                         <!-- descrizione FUTURO 3 -->
-                        <div v-if="propsLingua == 'italiano'" class="future_cont" :class="(marcatore == 3) ? 'displayOn' : 'displayOff'">
+                        <div v-if="propsLingua == 'italiano'" class="future_cont"
+                              :class="(marcatore == 3) ? 'displayOn' : 'displayOff'">
                               <h2>Il mio Futuro:</h2>
+                              <br>
                               Ho trovato quella qualcosa che mi da la spinta ad alzarmi la mattina con
                               <span class="accent">entusiasmo</span>.
                               Ora che ho finito gli studi Volgio di più...
@@ -107,7 +112,8 @@
                               Desidero trovare un ambiente che mi permetta di affrontare sfide sempre piu complesse,
                               che mi permettando di spingermi al mio limite e di divertirmi.
                               <br>
-                               Se pensi di potermi offrire questo, cerchi una persona che abbia sete di conosceza e voglia di lavorare. Hai trovato
+                              Se pensi di potermi offrire questo, cerchi una persona che abbia sete di conosceza e
+                              voglia di lavorare. Hai trovato
                               il tuo nuovo collaboratore! <a class="contattami" href="#contact">Contattami</a> per
                               conoscerci di persona.
 
@@ -119,80 +125,75 @@
 
                         <!-- -------------INGLESE----------- -->
                         <!-- Past -->
-                        <div v-if="propsLingua == 'english'" class="past_cont" :class="(marcatore == 1) ? 'displayOn' : 'displayOff'">
+                        <div v-if="propsLingua == 'english'" class="past_cont"
+                              :class="(marcatore == 1) ? 'displayOn' : 'displayOff'">
                               <h2>My Past:</h2>
+                              <br>
                               <span>
-                                    La mia storia parte a scuola dove ho studiato informatica
-                                    e posso proprio dire che in quel periodo mi sentivo obbligato a fare le cose.
-
-                                    Durante gli studi ho cominciato a lavorare al McDonald per guadagnarmi la mia
-                                    indipendenza ma dopo la scuola ho cercato la mia strada decidendo di cambiare direzione,
-                                    andando a fare l'aiuto cuoco.
+                                    My story starts in school where I studied computer science and I can really say that
+                                    at that time I felt compelled to do things. During my studies, I started working at
+                                    McDonald's to earn my independence but after school I looked for my own way and
+                                    decided to change direction, going to be a kitchen assistant.
                                     <br>
-                                    Ed è proprio quando mi stavo adagiando in quel mondo accontentandomi, che
-                                    mi sono reso conto di volere di più, che volevo <span class="accent">cambiare</span> 
-                                    la mia vita.
+                                    And it was just when I was settling into that world by being content, that I
+                                    realized I wanted more, that I wanted to <span class="accent">change</span> my life.
                                     <br>
-                                    Ho lasciato il posto fisso per cominciare a viaggiare
-                                    per fare nuove esperienze, finche
-                                    non ho incontrato <span class="accent">Boolean</span>.
-
+                                    I left the permanent job to start traveling for new experiences, until I met
+                                    <span class="accent">Boolean</span>.
                               </span>
 
                         </div>
 
                         <!-- Present -->
-                        <div v-if="propsLingua == 'english'" class="present_cont" :class="(marcatore == 2) ? 'displayOn' : 'displayOff'">
+                        <div v-if="propsLingua == 'english'" class="present_cont"
+                              :class="(marcatore == 2) ? 'displayOn' : 'displayOff'">
                               <span>
-                                    Negli ultimi 8-9 mesi ho affrontato un percorso formativo professionale come
-                                    WebDeveloper. 
+                                    For the past 8-9 months I have been going through professional training as a
+                                    WebDeveloper.
                                     <br>
-                                    Ho cominciato la formazione in autonomia, per un paio di mesi, prima di
-                                    iscrivermi a <span class="accent">Boolean</span>. 
+                                    I started the training on my own for a couple of months before enrolling in <span
+                                          class="accent">Boolean</span>.
                                     <br>
-                                    Le risorse gratis nel Web sono tante ma ho avuto l'occasione di accelerare i
-                                    tempi di apprendimento, affidandomi ad una azienda di professionisti
-                                    con un percorso gia ben definito. 
+                                    There are so many free resources on the Web, but I had the opportunity to accelerate
+                                    my learning time by relying on a company of professionals with an already
+                                    well-defined path.
                                     <br>
-                                    Ho avuto modo di affrontare numerosi progetti, ognuno con difficolta
-                                    specifiche, partendo dal front-end fino ad arrivare al back-end e la gestione
-                                    dei dati. 
+                                    I was able to tackle numerous projects, each with specific difficulties, starting
+                                    with the front-end and ending with the back-end and data management.
                                     <br>
-                                    E come montando un puzzle i pezzi si incastrano pian paino, ho aumentato la
-                                    mia conoscenza un passo alla volta.
+                                    And like assembling a puzzle the pieces slowly fit together, I increased my
+                                    knowledge one step at a time.
                                     <br>
-                                    Uno dei progetti che sicuramente mi ha piu coinvolto è Boolfix, una replica di
-                                    Netflix.
-
+                                    One of the projects that definitely got me most involved is Boolfix, a Netflix
+                                    rerun.
                               </span>
                         </div>
 
                         <!-- Future 3 -->
-                        <div v-if="propsLingua == 'english'" class="future_cont" :class="(marcatore == 3) ? 'displayOn' : 'displayOff'">
+                        <div v-if="propsLingua == 'english'" class="future_cont"
+                              :class="(marcatore == 3) ? 'displayOn' : 'displayOff'">
                               <h2>My Future:</h2>
-                              Ho trovato quella qualcosa che mi da la spinta ad alzarmi la mattina con
-                              <span class="accent">entusiasmo</span>.
-                              Ora che ho finito gli studi Volgio di più...
                               <br>
-                              Ho il desiderio di migliorare le mie capacità nel affrontare le problematiche del
-                              Front-end.
-                              Ma il mio obiettivo principale rimane specializzarmi
-                              nella <span class="accent"> programmazione Back-end.</span>
+                              I found that something that gives me the drive to get up in the morning with <span class="accent">enthusiasm</span>.
+                              Now that I have finished my studies I want more....
                               <br>
-                              Desidero trovare un ambiente che mi permetta di affrontare sfide sempre piu complesse,
-                              che mi permettando di spingermi al mio limite e di divertirmi.
+                              I have a desire to improve my skills in dealing with Front-end issues. But my main goal
+                              remains to specialize in <span class="accent">Back-end programming.</span>
                               <br>
-                               Se pensi di potermi offrire questo, cerchi una persona che abbia sete di conosceza e voglia di lavorare. Hai trovato
-                              il tuo nuovo collaboratore! <a class="contattami" href="#contact">Contattami</a> per
-                              conoscerci di persona.
-
-
+                              I would like to find an environment that allows me to take on increasingly complex
+                              challenges, allowing me to push my limits and have fun.
+                              <br>
+                              If you think you can offer me this, you are looking for someone who has a thirst for
+                              knowledge and a desire to work. You have found your new collaborator!<a class="contattami" href="#contact">Contact</a> me to meet
+                              in person.
                               <span>
 
                               </span>
                         </div>
 
                   </div>
+
+
 
 
                   <!-- Selezione LUNGHEZZA -->
@@ -227,8 +228,6 @@
 
             </div>
 
-
-
       </div>
 </template>
 
@@ -242,7 +241,7 @@ export default {
       data() {
             return {
                   marcatore: 2,
-                  img: "cvPresent.jpg"
+                  img: "profiloRafael.jpeg"
             }
       },
       methods: {
@@ -251,11 +250,11 @@ export default {
                         this.marcatore = this.marcatore - 1;
                   }
                   if (this.marcatore == 1) {
-                        this.img = "cvPast.jpg";
+                        this.img = "profiloRafael.jpeg";
                   } else if (this.marcatore == 2) {
-                        this.img = "cvPresent.jpg";
+                        this.img = "profiloRafael.jpeg";
                   } else if (this.marcatore == 3) {
-                        this.img = "cvFuture.jpg";
+                        this.img = "profiloRafael.jpeg";
                   }
 
 
@@ -266,25 +265,25 @@ export default {
                   }
 
                   if (this.marcatore == 1) {
-                        this.img = "cvPast.jpg";
+                        this.img = "profiloRafael.jpeg";
                   } else if (this.marcatore == 2) {
-                        this.img = "cvPresent.jpg";
+                        this.img = "profiloRafael.jpeg";
                   } else if (this.marcatore == 3) {
-                        this.img = "cvFuture.jpg";
+                        this.img = "profiloRafael.jpeg";
                   }
 
             },
             circle_selection1() {
                   this.marcatore = 1;
-                  this.img = "cvPast.jpg";
+                  this.img = "cprofiloRafael.jpeg";
             },
             circle_selection2() {
                   this.marcatore = 2;
-                  this.img = "cvPresent.jpg";
+                  this.img = "profiloRafael.jpeg";
             },
             circle_selection3() {
                   this.marcatore = 3;
-                  this.img = "cvFuture.jpg";
+                  this.img = "cprofiloRafael.jpeg";
             },
       }
 }
@@ -301,14 +300,10 @@ export default {
       padding-top: 15%;
       position: relative;
 
-      h2 {
-            font-family: 'Rancho', cursive;
-      }
-
 
       // Cont immagine Profilo
       .img_cont {
-            width: 200px;
+            width: 240px;
             height: 300px;
             position: relative;
 
@@ -343,7 +338,7 @@ export default {
                   display: flex;
                   flex-direction: column;
                   align-items: center;
-                  padding: 7% 1%;
+                  padding: 7% 5%;
 
                   .saluto {
                         font-size: 1.5rem;
@@ -358,12 +353,14 @@ export default {
                         flex-direction: column;
                         align-items: center;
 
+
                         // Nome Cognome
                         .name,
                         .surname {
-                              font-size: 5rem;
+                              font-size: 4.5rem;
                               font-weight: 900 !important;
                               text-shadow: 8px 8px 10px var(--purple-scuro);
+
 
                         }
 
@@ -371,7 +368,6 @@ export default {
                         // Professione 
                         h1 {
                               font-size: 1.5rem;
-
                               padding-bottom: 1rem;
 
 
@@ -380,7 +376,7 @@ export default {
 
                   }
 
-                  .profession{
+                  .profession {
                         text-align: center;
                   }
 
@@ -392,7 +388,7 @@ export default {
                   line-height: 1.7rem;
                   padding: 0 1.5rem;
                   text-align: center;
-                  
+
 
                   .contattami {
                         color: var(--lilla);
@@ -481,7 +477,7 @@ export default {
       .img_cont {
             position: absolute !important;
             top: 12%;
-            left: 7%;
+            left: 2%;
       }
 
       .container_description {
@@ -489,11 +485,12 @@ export default {
       }
 
 }
-@media screen and (min-width: 1170px){
+
+@media screen and (min-width: 1170px) {
       .img_cont {
             position: absolute !important;
             top: 15%;
-            left: 13%;
+            left: 10%;
       }
 
 }
@@ -534,13 +531,23 @@ export default {
 .before-enter {
       opacity: 0;
       transform: scale(0);
-      transition: all 1s cubic-bezier(.41, .01, .57, 1.61);
+      transition: all 1s;
 }
 
-/* 
-    If the element intersects with the viewport, the before-enter class is added.
-  */
 .enter {
+      opacity: 1;
+      transform: scale(1);
+}
+
+// -------------------------
+.before-enter2 {
+      opacity: 0;
+      transform: scale(0);
+      transition: all 1s;
+      transition-delay: .1s;
+}
+
+.enter2 {
       opacity: 1;
       transform: scale(1);
 }

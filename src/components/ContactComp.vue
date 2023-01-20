@@ -1,11 +1,11 @@
 <template>
       <div id="contact">
             <div class="col_left">
-                  <h2 v-if="propsLingua == 'english'" v-scroll2>Get in touch!</h2>
+                  <h2 v-if="propsLingua == 'english'">Get in touch!</h2>
                   <h2 v-else>Contattami!</h2>
 
                   <!-- Italiano -->
-                  <p v-scroll2 v-if="propsLingua == 'italiano'">
+                  <p v-if="propsLingua == 'italiano'">
                         Attualmente sto cercando il mio primo lavoro per avviare la mia carriera.
                         <br>
                         E sono come una spugna pronta ad assorbire ogni conoscenza che susciti la mia curiosità.
@@ -14,11 +14,10 @@
                         Se sei interessato a conoscermi, non esitare a contattarmi compilando il form e ti ricontatterò
                         il prima possibile.
                         <br>
-                        <br>
                         Oppure, se preferisci, scrivimi direttamente alla mia mail o su WhatsApp:
                         <br>
                         <br>
-                        Cliccami:<span class="accent mail">rafael.leonardi98@gmail.com</span>
+                        <span class="accent mail">rafael.leonardi98@gmail.com</span>
                         <br>
                         <br>
                         <span class="accent">+39 351 628 1064</span>
@@ -26,7 +25,7 @@
                   </p>
 
                   <!-- Inglese -->
-                  <p v-else v-scroll2>
+                  <p v-else>
                         I am currently looking for my first job to launch my career.
                         <br>
                         And I'm like a sponge ready to absorb any knowledge that arouses my curiosity.
@@ -37,7 +36,7 @@
                         If you are interested in getting to know me, feel free to contact me by submitting the form
                         and I will get back to you as soon as possible.
                         <br>
-                        <br>
+                        
                         Or if you prefer,Click on the links below and write me directly to my email or on my WhatsApp:
                         <br>
                         <br>
@@ -54,14 +53,15 @@
             </div>
 
             <!-- Form -->
-            <div v-scrollanimation class="container_form">
+            <div class="container_form">
                   <form class="form" @submit.prevent="sendEmail">
 
                         <label class="input_label">Name</label>
                         <input required class="input" type="text" v-model="name" name="name" placeholder="Your Name">
 
                         <label class="input_label">Email</label>
-                        <input required class="input" type="email" v-model="email" name="email" placeholder="Your Email">
+                        <input required class="input" type="email" v-model="email" name="email"
+                              placeholder="Your Email">
 
                         <label class="input_label">Message</label>
                         <textarea required class="input" name="message" v-model="message" cols="30" rows="5"
@@ -149,10 +149,6 @@ a {
                         text-decoration-color: var(--lilla);
                         text-decoration-thickness: 2px;
                   }
-
-                  .mail {}
-
-
             }
       }
 
@@ -206,29 +202,4 @@ a {
 
 }
 
-// .before-enter {
-//     opacity: 0;
-//     transform: scale(0) rotate(0deg);
-//     transition: all 1s cubic-bezier(.41,.01,.57,1.61);
-//   }
-//   /* 
-//     If the element intersects with the viewport, the before-enter class is added.
-//   */
-//   .enter {
-//     opacity: 1;
-//     transform: scale(1) rotate(360deg);
-//   }
-
-//   .before-enter2 {
-//     opacity: 0;
-//     transform: scale(0);
-//     transition: all 1s cubic-bezier(.41,.01,.57,1.61);
-//   }
-//   /* 
-//     If the element intersects with the viewport, the before-enter class is added.
-//   */
-//   .enter2{
-//     opacity: 1;
-//     transform: scale(1);
-//   }
 </style>
