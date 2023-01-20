@@ -4,11 +4,19 @@
             <h2 id="projects" v-else>Proggetti su cui ho lavorato</h2>
 
             <div class="slider">
+
+
+
+                  <!-- Left -->
                   <div id="col_left">
+                        <!-- Freccie -->
+                        <font-awesome-icon @click="arrowDown()" icon="fa-solid fa-chevron-right" />
+                        <font-awesome-icon @click="arrowUP()" icon="fa-solid fa-chevron-left" />
+
                         <img class="immaginePrincipale" :src="imgArray[indice]" alt="ImmaginePrincipale">
                   </div>
 
-                  <!-- ^Immagine antemprima lato destro -->
+                  <!-- Right -->
                   <div id="col_right">
 
                         <!-- img 1 -->
@@ -31,6 +39,7 @@
                               <img class="imgAnteprima" :src="img4" alt="Project 4">
                         </div>
                   </div>
+
             </div>
 
 
@@ -39,12 +48,6 @@
 </template>
 
 <script>
-
-
-
-
-
-
 export default {
       name: 'ProjectsComp',
 
@@ -53,13 +56,13 @@ export default {
       },
       data() {
             return {
-                  img1: "/assets/prj1.png",
+                  img1: "/assets/prj1.jpg",
                   img2: "/assets/prj2.png",
                   img3: "/assets/prj3.png",
                   img4: "/assets/prj4.png",
 
                   imgArray: [
-                        "/assets/prj1.png",
+                        "/assets/prj1.jpg",
                         "/assets/prj2.png",
                         "/assets/prj3.png",
                         "/assets/prj4.png",
@@ -80,7 +83,6 @@ export default {
                   this.indice = index
 
             },
-
 
             arrowDown: function () {
                   let lunghezza = this.imgArray.length - 1;
@@ -110,8 +112,9 @@ export default {
                   }
             },
             attivaFunzione() {
-                  setInterval(() => { this.arrowDown() }, 4000)
-            }
+                  setInterval(() => { this.arrowDown() }, 8000)
+            },
+
 
 
       },
@@ -126,21 +129,25 @@ export default {
       color: var(--text1);
       margin-top: 20px;
 
-      h2{
-            font-size: 2rem;
+      h2 {
             font-weight: bold;
             padding-top: 5%;
+            font-size: 2.3rem;
+            text-align: center;
+            text-shadow: 3px 3px 10px var(--lilla);
       }
 
       .slider {
             display: flex;
             flex-direction: column;
- 
+
+
 
             #col_left {
                   width: 100%;
-                  height: 70vh;
+                  height: 60vh;
                   padding: 1.5rem 1rem .5rem 1rem;
+                  position: relative;
 
                   .immaginePrincipale {
                         width: 100%;
@@ -153,7 +160,7 @@ export default {
                   width: 100%;
                   height: 100px;
                   display: flex;
-                  gap: 20px;
+                  gap: 10px;
                   padding: 0 1rem;
 
 
@@ -170,15 +177,56 @@ export default {
             }
 
 
+            // Freccie
+            .fa-chevron-right {
+                  position: absolute;
+                  right: 20px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  font-size: 3rem;
+                  background-color:  rgba(0, 0, 0, 0.596);
+                  padding: 1rem;
+                  color: var(--text1);
+                  cursor: pointer;
+                  transition: all .7s;
+                  &:hover{
+                        border: 1px solid black;
+                        color: black;
+                        background-color: var(--lilla);
+                  }
+            }
+
+            .fa-chevron-left {
+                  position: absolute;
+                  left: 20px;
+                  top: 50%;
+                  transform: translateY(-50%);
+                  font-size: 3rem;
+                  background-color: rgba(0, 0, 0, 0.596);
+                  padding: 1rem;
+                  color: var(--text1);
+                  cursor: pointer;
+                  transition: all .7s;
+                  &:hover{
+                        border: 1px solid black;
+                        color: black;
+                        background-color: var(--lilla);
+                  }
+            }
+
       }
 
 
 }
 
-@media screen and (min-width: 1000px){
-      .slider{
+@media screen and (min-width: 1000px) {
+      .slider {
             padding: 0 6rem;
-            height: 100vh;
+            height: 90vh;
+
+            #col_right {
+                  gap: 20px !important;
+            }
 
       }
 }
