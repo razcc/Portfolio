@@ -1,7 +1,7 @@
 <template>
-      <section id="projects">
-            <h2 v-if="propsLingua == 'english'">Projects I've worked on:</h2>
-            <h2 v-else>Proggetti su cui ho lavorato</h2>
+      <section class="projects">
+            <h2 id="projects" v-if="propsLingua == 'english'">Projects I've worked on:</h2>
+            <h2 id="projects" v-else>Proggetti su cui ho lavorato</h2>
 
             <div class="slider">
                   <div id="col_left">
@@ -55,14 +55,14 @@ export default {
             return {
                   img1: "/assets/prj1.png",
                   img2: "/assets/prj2.png",
-                  img3: "/assets/prj1.png",
-                  img4: "/assets/prj2.png",
+                  img3: "/assets/prj3.png",
+                  img4: "/assets/prj4.png",
 
                   imgArray: [
                         "/assets/prj1.png",
                         "/assets/prj2.png",
-                        "/assets/prj1.png",
-                        "/assets/prj2.png",
+                        "/assets/prj3.png",
+                        "/assets/prj4.png",
                   ],
                   indice: 0,
                   classeVariabile: "",
@@ -121,21 +121,30 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-#projects {
+.projects {
       text-align: center;
       color: var(--text1);
+      margin-top: 20px;
+
+      h2{
+            font-size: 2rem;
+            font-weight: bold;
+            padding-top: 5%;
+      }
 
       .slider {
-            width: 100%;
-            
+            display: flex;
+            flex-direction: column;
+ 
 
             #col_left {
                   width: 100%;
-                  height: 50vh;
-                  padding-top: 20px;
+                  height: 70vh;
+                  padding: 1.5rem 1rem .5rem 1rem;
 
                   .immaginePrincipale {
                         width: 100%;
+                        height: 100%;
                   }
 
             }
@@ -145,6 +154,7 @@ export default {
                   height: 100px;
                   display: flex;
                   gap: 20px;
+                  padding: 0 1rem;
 
 
                   .cont_anteprima {
@@ -152,7 +162,7 @@ export default {
 
                         .imgAnteprima {
                               width: 100%;
-
+                              height: 100%;
                         }
 
                   }
@@ -163,5 +173,13 @@ export default {
       }
 
 
+}
+
+@media screen and (min-width: 1000px){
+      .slider{
+            padding: 0 6rem;
+            height: 100vh;
+
+      }
 }
 </style>
