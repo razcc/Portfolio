@@ -56,16 +56,16 @@ export default {
       },
       data() {
             return {
-                  img1: "/assets/prj1.jpg",
-                  img2: "/assets/prj2.png",
-                  img3: "/assets/prj3.png",
-                  img4: "/assets/prj4.png",
+                  img1: "/assets/workInPRogress.jpg",
+                  img2: "/assets/workInPRogress.jpg",
+                  img3: "/assets/workInPRogress.jpg",
+                  img4: "/assets/workInPRogress.jpg",
 
                   imgArray: [
-                        "/assets/prj1.jpg",
-                        "/assets/prj2.png",
-                        "/assets/prj3.png",
-                        "/assets/prj4.png",
+                        "/assets/workInPRogress.jpg",
+                        "/assets/workInPRogress.jpg",
+                        "/assets/workInPRogress.jpg",
+                        "/assets/workInPRogress.jpg",
                   ],
                   indice: 0,
                   classeVariabile: "",
