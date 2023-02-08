@@ -53,8 +53,7 @@
 
                                     Durante gli studi ho cominciato a lavorare al McDonald per guadagnarmi la mia
                                     indipendenza ma dopo la scuola ho cercato la mia strada decidendo di cambiare
-                                    direzione,
-                                    andando a fare l'aiuto cuoco.
+                                    direzione, andando a fare l'aiuto cuoco.
                                     <br>
                                     Ed è proprio quando mi stavo adagiando in quel mondo accontentandomi, che
                                     mi sono reso conto di volere di più, che volevo <span class="accent">cambiare</span>
@@ -72,10 +71,10 @@
                         <div v-if="propsLingua == 'italiano'" class="present_cont"
                               :class="(marcatore == 2) ? 'displayOn' : 'displayOff'">
                               <span>
-                                    Negli ultimi 8-9 mesi ho affrontato un percorso formativo professionale come
+                                    Negli ultimi 6 mesi ho affrontato un percorso formativo professionale come
                                     WebDeveloper.
                                     <br>
-                                    Ho cominciato la formazione in autonomia, per un paio di mesi, prima di
+                                    Ho cominciato la formazione in autonomia, prima di
                                     iscrivermi a <span class="accent">Boolean</span>.
                                     <br>
                                     Le risorse gratis nel Web sono tante ma ho avuto l'occasione di accelerare i
@@ -89,7 +88,7 @@
                                     E come montando un puzzle i pezzi si incastrano pian paino, ho aumentato la
                                     mia conoscenza un passo alla volta.
                                     <br>
-                                    Uno dei progetti che sicuramente mi ha piu coinvolto è Boolfix, una replica di
+                                    Uno dei progetti che sicuramente mi ha più coinvolto è Boolfix, una replica di
                                     Netflix.
 
                               </span>
@@ -113,9 +112,9 @@
                               che mi permettando di spingermi al mio limite e di divertirmi.
                               <br>
                               Se pensi di potermi offrire questo, cerchi una persona che abbia sete di conosceza e
-                              voglia di lavorare. Hai trovato
-                              il tuo nuovo collaboratore! <a class="contattami" href="#contact">Contattami</a> per
-                              conoscerci di persona.
+                              voglia di lavorare. Hai trovato il tuo nuovo collaboratore! 
+                              <a class="contattami" href="#contact">Contattami</a> 
+                              per conoscerci di persona.
 
 
                               <span>
@@ -131,8 +130,8 @@
                               <br>
                               <span>
                                     My story starts in school where I studied computer science and I can really say that
-                                    at that time I felt compelled to do things. During my studies, I started working at
-                                    McDonald's to earn my independence but after school I looked for my own way and
+                                    at that time I felt compelled to do things.
+                                    During my studies, I started working at McDonald's to earn my independence but after school I looked for my own way and
                                     decided to change direction, going to be a kitchen assistant.
                                     <br>
                                     And it was just when I was settling into that world by being content, that I
@@ -148,10 +147,10 @@
                         <div v-if="propsLingua == 'english'" class="present_cont"
                               :class="(marcatore == 2) ? 'displayOn' : 'displayOff'">
                               <span>
-                                    For the past 8-9 months I have been going through professional training as a
+                                    For the past 6 months I have been going through professional training as a
                                     WebDeveloper.
                                     <br>
-                                    I started the training on my own for a couple of months before enrolling in <span
+                                    I started the training on my own before enrolling in <span
                                           class="accent">Boolean</span>.
                                     <br>
                                     There are so many free resources on the Web, but I had the opportunity to accelerate
