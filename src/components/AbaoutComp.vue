@@ -13,7 +13,7 @@
             <div class="container_description">
 
                   <!-- Introdduzione -->
-                  <div class="introduction">
+                  <div v-scrollanimation class="introduction">
 
                         <!-- Saluto Cont-->
                         <div class="saluto_cont">
@@ -39,7 +39,7 @@
                   </div>
 
 
-                  <div class="description">
+                  <div v-scrollanimation class="description">
 
                         <!-- ITALIANO---------------------------- -->
                         <!-- descrizione PASSATO 2 -->
@@ -197,7 +197,7 @@
 
 
                   <!-- Selezione LUNGHEZZA -->
-                  <div class="description_selector_cont">
+                  <div v-scrollanimation class="description_selector_cont">
 
                         <!-- Freccia Sinistra -->
 

@@ -75,7 +75,7 @@ export default {
             return {
                   showNavbar: false,
                   lastScrollPosition: 0,
-                  linguaScelta: 'english'
+                  linguaScelta: 'italiano'
 
             }
       },

@@ -243,7 +243,7 @@ export default {
 .before-enter {
       opacity: 0;
       transform: scale(0);
-      transition: all 1s;
+      transition: all 0.8s;
 }
 
 .enter {

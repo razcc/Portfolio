@@ -8,27 +8,27 @@
                         <h2>Front End Skills</h2>
 
                         <div class="allSkill_cont">
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <span>Html</span>
                                     <img src="../img/1Html.png" alt="">
                               </div>
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <span>Css</span>
                                     <img src="../img/2Css.png" alt="">
                               </div>
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <span>Scss</span>
                                     <img src="../img/scss.svg" alt="">
                               </div>
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <span>Bootstrap</span>
                                     <img src="../img/3Bootstrap.png" alt="">
                               </div>
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <span>JavaScript</span>
                                     <img src="../img/4Js.png" alt="">
                               </div>
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <div class="vue">Vue</div>
                                     <img src="../img/5Vue.png" alt="">
                               </div>
@@ -60,16 +60,16 @@
                         <h2>Back End Skills</h2>
 
                         <div class="allSkill_cont">
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <span>Php</span>
                                     <img src="../img/6Php.png" alt="">
                               </div>
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <span>Laravel</span>
                                     <img src="../img/7Laravel.png" alt="">
                               </div>
 
-                              <div v-scrollanimation class="skill_cont">
+                              <div  class="skill_cont">
                                     <span>Mamp</span>
                                     <img src="../img/Mamp.png" alt="">
                               </div>
