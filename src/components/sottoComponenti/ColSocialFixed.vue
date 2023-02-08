@@ -5,7 +5,8 @@
                   <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-github" /></a>
                   <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-linkedin-in" /></a>
                   <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-codepen" /></a>
-                  <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-instagram" /></a>
+
+                  <a href=""><font-awesome-icon class="icon" icon="fa-solid fa-envelope" /></a>
             </div>
 
       </div>
@@ -46,7 +47,7 @@ export default {
                   position: absolute;
                   bottom: 0;
                   left: 50%;
-                  height: 100px;
+                  height: 40%;
                   width: 2px;
                   background-color: var(--lilla);
                   transform: translateX(-50%);
