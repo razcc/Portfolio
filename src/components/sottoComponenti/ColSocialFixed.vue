@@ -1,12 +1,19 @@
 <template>
       <!-- ColLeft -->
-      <div  v-scrollanimation class="col_social">
+      <div v-scrollanimation class="col_social">
             <div class="down_elem">
-                  <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-github" /></a>
-                  <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-linkedin-in" /></a>
-                  <a href=""><font-awesome-icon class="icon" icon="fa-brands fa-codepen" /></a>
-
-                  <a href=""><font-awesome-icon class="icon" icon="fa-solid fa-envelope" /></a>
+                  <a  target="_blank" href="https://github.com/razcc">
+                        <font-awesome-icon class="icon" icon="fa-brands fa-github" />
+                  </a>
+                  <a  target="_blank" href="https://www.linkedin.com/in/rafael-leonardi-a667b4215/">
+                        <font-awesome-icon class="icon" icon="fa-brands fa-linkedin-in" />
+                  </a>
+                  <a  target="_blank" href="https://codepen.io/razcc">
+                        <font-awesome-icon class="icon" icon="fa-brands fa-codepen" />
+                  </a>
+                  <a  target="_blank" href="mailto:rafael.leonardi98@gmail.com" rel="noopener noreferrer">
+                        <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
+                  </a>
             </div>
 
       </div>
@@ -74,7 +81,7 @@ export default {
                   transition: all .4s;
 
                   &:hover {
-                        color: var( --hover-links);
+                        color: var(--hover-links);
                         transform: translateY(-15%);
                         box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.557);
 
@@ -84,23 +91,23 @@ export default {
       }
 }
 
-@media screen and (max-width: 1070px){
-      .col_social{
+@media screen and (max-width: 1070px) {
+      .col_social {
             transform: translateX(-120%) !important;
       }
 }
 
 .before-enter {
-    opacity: 0;
-    transform: translateY(-100%);
-    transition: all 1s cubic-bezier(.41,.01,.57,1.61);
-  }
-  /* 
+      opacity: 0;
+      transform: translateY(-100%);
+      transition: all 1s cubic-bezier(.41, .01, .57, 1.61);
+}
+
+/* 
     If the element intersects with the viewport, the before-enter class is added.
   */
-  .enter {
-    opacity: 1;
-    transform: translateY(0%);
-  }
-
+.enter {
+      opacity: 1;
+      transform: translateY(0%);
+}
 </style>
