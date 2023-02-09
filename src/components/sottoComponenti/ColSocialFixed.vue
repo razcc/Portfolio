@@ -12,6 +12,9 @@
                         <font-awesome-icon class="icon" icon="fa-brands fa-codepen" />
                   </a>
                   <a  target="_blank" href="mailto:rafael.leonardi98@gmail.com" rel="noopener noreferrer">
+                        
+                  </a>
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
                         <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
                   </a>
             </div>
