@@ -1,47 +1,110 @@
 <template>
-      <section class="projects">
-            <h2 id="projects" v-if="propsLingua == 'english'">Projects I've worked on:</h2>
-            <h2 id="projects" v-else>Proggetti su cui ho lavorato</h2>
-
-            <div class="slider">
-
-
-
-                  <!-- Left -->
-                  <div id="col_left">
-                        <!-- Freccie -->
-                        <font-awesome-icon @click="arrowDown()" icon="fa-solid fa-chevron-right" />
-                        <font-awesome-icon @click="arrowUP()" icon="fa-solid fa-chevron-left" />
-
-                        <img class="immaginePrincipale" :src="imgArray[indice]" alt="ImmaginePrincipale">
+      <section id="projects">
+            <h2 class="progetto_singolo" v-if="propsLingua == 'english'">My Projects</h2>
+            <h2 class="progetto_singolo" v-else>Proggetti</h2>
+            <div class="container">
+                  <div class="anteprima">
+                        <img v-if="progettoActive == 1" src="/assets/boolflix_anteprima.png" alt="">
+                        <img v-else-if="progettoActive == 2" src="/assets/dc_anteprima.png" alt="">
+                        <img v-else-if="progettoActive == 3" src="/assets/landrick_anteprima.png" alt="">
+                        <img v-else-if="progettoActive == 4" src="/assets/workInPRogress.jpg" alt="">
+                        <img v-else-if="progettoActive == 5" src="/assets/workInPRogress.jpg" alt="">
                   </div>
 
-                  <!-- Right -->
-                  <div  id="col_right">
+                  <div class="lista_cont">
+                        <ul class="lista_progetti">
 
-                        <!-- img 1 -->
-                        <div v-scrollanimation class="cont_anteprima">
-                              <img class="imgAnteprima" :src="img1" alt="Project 1">
-                        </div>
+                              <!-- Boolflix -->
+                              <li @mouseenter="progettoActive = 1" class="progetto_singolo">
 
-                        <!-- img 2 -->
-                        <div v-scrollanimation class="cont_anteprima">
-                              <img class="imgAnteprima" :src="img2" alt="Project 2">
-                        </div>
+                                    <span>
+                                          Boolflix
+                                          <font-awesome-icon icon="fa-solid fa-arrow-left" />
+                                    </span>
+                                    <ul class="linguaggi">
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-vuejs" />
+                                          </li>
+                                          <li class="api_cont">
+                                                <img src="../img/api.png" alt="api">
+                                          </li>
+                                    </ul>
+                              </li>
 
-                        <!-- img 3 -->
-                        <div v-scrollanimation class="cont_anteprima">
-                              <img class="imgAnteprima" :src="img3" alt="Project 3">
-                        </div>
+                              <!-- DC -->
+                              <li @mouseenter="progettoActive = 2" class="progetto_singolo">
+                                    <span>
+                                          DC Comics
+                                          <font-awesome-icon icon="fa-solid fa-arrow-left" />
+                                    </span>
 
-                        <!-- img 4 -->
-                        <div v-scrollanimation class="cont_anteprima imgFondo">
-                              <img class="imgAnteprima" :src="img4" alt="Project 4">
-                        </div>
+                                    <ul class="linguaggi">
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-php" />
+                                          </li>
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-laravel" />
+                                          </li>
+                                    </ul>
+                              </li>
+
+                              <!-- landrick -->
+                              <li @mouseenter="progettoActive = 3" class="progetto_singolo">
+
+                                    <span>
+                                          Landrick
+                                          <font-awesome-icon icon="fa-solid fa-arrow-left" />
+                                    </span>
+                                    <ul class="linguaggi">
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-vuejs" />
+                                          </li>
+                                    </ul>
+                              </li>
+
+                              <!-- Cat's Life -->
+                              <li @mouseenter="progettoActive = 4" class="progetto_singolo">
+
+                                    <span>
+                                          Cat's Life
+                                          <font-awesome-icon icon="fa-solid fa-arrow-left" />
+                                    </span>
+                                    <ul class="linguaggi">
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-vuejs" />
+                                          </li>
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-php" />
+                                          </li>
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-laravel" />
+                                          </li>
+
+                                    </ul>
+                              </li>
+
+                              <!-- Progetto finale -->
+                              <li @mouseenter="progettoActive = 5" class="progetto_singolo">
+
+                                    <span>
+                                          Progetto finale
+                                          <font-awesome-icon icon="fa-solid fa-arrow-left" />
+                                    </span>
+                                    <ul class="linguaggi">
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-vuejs" />
+                                          </li>
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-php" />
+                                          </li>
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-laravel" />
+                                          </li>
+                                    </ul>
+                              </li>
+                        </ul>
                   </div>
-
             </div>
-
 
 
       </section>
@@ -56,67 +119,10 @@ export default {
       },
       data() {
             return {
-                  img1: "/assets/workInPRogress.jpg",
-                  img2: "/assets/workInPRogress.jpg",
-                  img3: "/assets/workInPRogress.jpg",
-                  img4: "/assets/workInPRogress.jpg",
-
-                  imgArray: [
-                        "/assets/workInPRogress.jpg",
-                        "/assets/workInPRogress.jpg",
-                        "/assets/workInPRogress.jpg",
-                        "/assets/workInPRogress.jpg",
-                  ],
-                  indice: 0,
-                  classeVariabile: "",
+                  progettoActive: 1,
             }
       },
-      mounted() {
-            //Entra in gioco qunaod l'applicativo vueha caricato l'elemento #root
-            this.attivaFunzione()
-      },
       methods: {
-            getPhoto() {
-                  return '../img/prj1.png';
-            },
-            Img1Selection: function (index) {
-                  this.indice = index
-
-            },
-
-            arrowDown: function () {
-                  let lunghezza = this.imgArray.length - 1;
-                  console.log(lunghezza)
-
-                  if (this.indice >= lunghezza) {
-                        return this.indice = 0;
-
-                  } else {
-                        return this.indice++;
-
-
-                  }
-            },
-            arrowUP: function () {
-                  let lunghezza = this.imgArray.length - 1;
-                  console.log(lunghezza)
-
-                  console.log(this.indice)
-                  if (this.indice > lunghezza) {
-                        return this.indice = 0;
-
-                  } else if (this.indice == 0) {
-                        return this.indice = lunghezza;
-                  } else {
-                        return this.indice--;
-                  }
-            },
-            attivaFunzione() {
-                  setInterval(() => { this.arrowDown() }, 8000)
-            },
-
-
-
       },
 
 
@@ -124,130 +130,102 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.projects {
+#projects {
       height: 100vh;
-      text-align: center;
+      padding: 5% 5% 0 5%;
       color: var(--text1);
-      margin-top: 20px;
 
       h2 {
-            font-weight: bold;
-            font-size: 2.3rem;
             text-align: center;
-            text-shadow: 3px 3px 10px var(--lilla);
-            height: 10%;
-            padding-top: 5%;
+            font-size: 2.5rem;
       }
 
-      .slider {
+      .container {
             display: flex;
-            flex-direction: column;
-            height: 90%;
-            margin-top: 5%;
+            align-items: center;
+            height: 100%;
 
-
-
-            #col_left {
-                  width: 80%;
-                  align-self: center;
-                  height: 60%;
-
-                  position: relative;
-
-                  .immaginePrincipale {
-                        width: 100%;
-                        height: 100%;
-                  }
-
+            .anteprima,
+            .lista_cont {
+                  width: 50%;
             }
 
-            #col_right {
-                  width: 75%;
-                  align-self: center;
-                  padding-top: 25px;
-                  height: 20%;
+            .anteprima {
                   display: flex;
-                  gap: 10px;
+                  align-items: center;
+                  padding: 0 30px;
+
+                  img {
+                        width: 100%;
+                  }
+            }
+
+            .lista_cont {
+
+                  .lista_progetti {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        gap: 50px;
+                        list-style: none;
+
+                        .progetto_singolo {
+                              font-size: 1.6rem;
+                              cursor: pointer;
+                              transition: all .7s;
+                              border-bottom: 1px solid var(--text1);
+                              display: flex;
+                              justify-content: space-between;
+
+                              .fa-arrow-left {
+                                    display: none;
+                                    transition: all 0.7s;
+                                    animation: arrow 0.9s linear infinite;
+                                    font-size: 1.4rem;
+                              }
+
+                              &:hover {
+                                    font-size: 1.8rem;
+
+                              }
+
+                              &:hover .fa-arrow-left {
+                                    display: inline-block;
+                              }
 
 
+                              .linguaggi {
+                                    display: flex;
+                                    flex-direction: row;
+                                    list-style: none;
+                                    gap: 20px;
 
-                  .cont_anteprima {
-                        width: calc(100% / 4 - 10px);
 
-                        .imgAnteprima {
-                              width: 100%;
-                              height: 100%;
+                                    img {
+                                          width: 35px;
+                                          height: 35px;
+                                          filter: invert(1);
+                                    }
+                              }
                         }
 
                   }
-
-            }
-
-
-            // Freccie
-            .fa-chevron-right {
-                  position: absolute;
-                  right: 20px;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  font-size: 3rem;
-                  background-color: rgba(0, 0, 0, 0.596);
-                  padding: 1rem;
-                  color: var(--text1);
-                  cursor: pointer;
-                  transition: all .7s;
-
-                  &:hover {
-                        border: 1px solid black;
-                        color: black;
-                        background-color: var(--lilla);
-                  }
-            }
-
-            .fa-chevron-left {
-                  position: absolute;
-                  left: 20px;
-                  top: 50%;
-                  transform: translateY(-50%);
-                  font-size: 3rem;
-                  background-color: rgba(0, 0, 0, 0.596);
-                  padding: 1rem;
-                  color: var(--text1);
-                  cursor: pointer;
-                  transition: all .7s;
-
-                  &:hover {
-                        border: 1px solid black;
-                        color: black;
-                        background-color: var(--lilla);
-                  }
             }
 
       }
 
-
 }
 
-@media screen and (min-width: 1000px) {
-      .slider {
-            padding: 0 6rem;
-            height: 90vh;
-
-            #col_right {
-                  gap: 20px !important;
-            }
-
+@keyframes arrow {
+      0% {
+            transform: translateX(0);
       }
-}
-
-.before-enter {
-      opacity: 0;
-      transform: scale(0);
-      transition: all 0.8s;
-}
-
-.enter {
-      opacity: 1;
-      transform: scale(1);
+      50%{
+            transform: translateX(100%);
+      }
+      100% {
+            transform: translateX(0);
+      }
 }
 </style>

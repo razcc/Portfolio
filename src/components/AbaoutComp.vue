@@ -277,15 +277,15 @@ export default {
             },
             circle_selection1() {
                   this.marcatore = 1;
-                  this.img = "cprofiloRafael.jpeg";
+
             },
             circle_selection2() {
                   this.marcatore = 2;
-                  this.img = "profiloRafael.jpeg";
+
             },
             circle_selection3() {
                   this.marcatore = 3;
-                  this.img = "cprofiloRafael.jpeg";
+
             },
       }
 }
