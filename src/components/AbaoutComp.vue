@@ -112,8 +112,8 @@
                               che mi permettando di spingermi al mio limite e di divertirmi.
                               <br>
                               Se pensi di potermi offrire questo, cerchi una persona che abbia sete di conosceza e
-                              voglia di lavorare. Hai trovato il tuo nuovo collaboratore! 
-                              <a class="contattami" href="#contact">Contattami</a> 
+                              voglia di lavorare. Hai trovato il tuo nuovo collaboratore!
+                              <a class="contattami" href="#contact">Contattami</a>
                               per conoscerci di persona.
 
 
@@ -131,7 +131,8 @@
                               <span>
                                     My story starts in school where I studied computer science and I can really say that
                                     at that time I felt compelled to do things.
-                                    During my studies, I started working at McDonald's to earn my independence but after school I looked for my own way and
+                                    During my studies, I started working at McDonald's to earn my independence but after
+                                    school I looked for my own way and
                                     decided to change direction, going to be a kitchen assistant.
                                     <br>
                                     And it was just when I was settling into that world by being content, that I
@@ -173,7 +174,8 @@
                               :class="(marcatore == 3) ? 'displayOn' : 'displayOff'">
                               <h2>My Future:</h2>
                               <br>
-                              I found that something that gives me the drive to get up in the morning with <span class="accent">enthusiasm</span>.
+                              I found that something that gives me the drive to get up in the morning with <span
+                                    class="accent">enthusiasm</span>.
                               Now that I have finished my studies I want more....
                               <br>
                               I have a desire to improve my skills in dealing with Front-end issues. But my main goal
@@ -183,7 +185,8 @@
                               challenges, allowing me to push my limits and have fun.
                               <br>
                               If you think you can offer me this, you are looking for someone who has a thirst for
-                              knowledge and a desire to work. You have found your new collaborator!<a class="contattami" href="#contact">Contact</a> me to meet
+                              knowledge and a desire to work. You have found your new collaborator!<a class="contattami"
+                                    href="#contact">Contact</a> me to meet
                               in person.
                               <span>
 
@@ -527,27 +530,32 @@ export default {
       background-color: black !important;
 }
 
-.before-enter {
-      opacity: 0;
-      transform: scale(0);
-      transition: all 1s;
-}
 
-.enter {
-      opacity: 1;
-      transform: scale(1);
-}
+@media screen and (min-width: 450px) {
 
-// -------------------------
-.before-enter2 {
-      opacity: 0;
-      transform: scale(0);
-      transition: all 1s;
-      transition-delay: .1s;
-}
+      .before-enter {
+            opacity: 0;
+            transform: scale(0);
+            transition: all 1s;
+      }
 
-.enter2 {
-      opacity: 1;
-      transform: scale(1);
+      .enter {
+            opacity: 1;
+            transform: scale(1);
+      }
+
+      // -------------------------
+      .before-enter2 {
+            opacity: 0;
+            transform: scale(0);
+            transition: all 1s;
+            transition-delay: .1s;
+      }
+
+      .enter2 {
+            opacity: 1;
+            transform: scale(1);
+      }
+
 }
 </style>
