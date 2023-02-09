@@ -2,17 +2,18 @@
       <!-- ColLeft -->
       <div v-scrollanimation class="col_social">
             <div class="down_elem">
-                  <a  target="_blank" href="https://github.com/razcc">
+                  <a target="_blank" href="https://github.com/razcc">
                         <font-awesome-icon class="icon" icon="fa-brands fa-github" />
                   </a>
-                  <a  target="_blank" href="https://www.linkedin.com/in/rafael-leonardi-a667b4215/">
+                  <a target="_blank" href="https://www.linkedin.com/in/rafael-leonardi-a667b4215/">
                         <font-awesome-icon class="icon" icon="fa-brands fa-linkedin-in" />
                   </a>
-                  <a  target="_blank" href="https://codepen.io/razcc">
+                  <a target="_blank" href="https://codepen.io/razcc">
                         <font-awesome-icon class="icon" icon="fa-brands fa-codepen" />
                   </a>
 
-                  <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
+                  <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com"
+                        target="_blank">
                         <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
                   </a>
             </div>
@@ -98,17 +99,19 @@ export default {
       }
 }
 
-.before-enter {
-      opacity: 0;
-      transform: translateY(-100%);
-      transition: all 1s cubic-bezier(.41, .01, .57, 1.61);
-}
+@media screen and (min-width: 500px) {
+      .before-enter {
+            opacity: 0;
+            transform: translateY(-100%);
+            transition: all 1s cubic-bezier(.41, .01, .57, 1.61);
+      }
 
-/* 
-    If the element intersects with the viewport, the before-enter class is added.
-  */
-.enter {
-      opacity: 1;
-      transform: translateY(0%);
+      /* 
+      If the element intersects with the viewport, the before-enter class is added.
+      */
+      .enter {
+            opacity: 1;
+            transform: translateY(0%);
+      }
 }
 </style>
