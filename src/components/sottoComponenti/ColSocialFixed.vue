@@ -11,9 +11,7 @@
                   <a  target="_blank" href="https://codepen.io/razcc">
                         <font-awesome-icon class="icon" icon="fa-brands fa-codepen" />
                   </a>
-                  <a  target="_blank" href="mailto:rafael.leonardi98@gmail.com" rel="noopener noreferrer">
-                        
-                  </a>
+
                   <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
                         <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
                   </a>
@@ -44,7 +42,7 @@ export default {
 
       // Elementi 
       .down_elem {
-            height: 40%;
+            height: 300px;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -69,7 +67,7 @@ export default {
                   position: absolute;
                   top: 0;
                   left: 50%;
-                  height: 30px;
+                  height: 10%;
                   width: 2px;
                   background-color: var(--lilla);
                   transform: translateX(-50%) translateY(-130%);

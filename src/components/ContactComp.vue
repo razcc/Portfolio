@@ -19,15 +19,16 @@
         Oppure, se preferisci, scrivimi direttamente alla mia mail:
         <br />
         <br />
-        <span class="accent mail">
-          
-          <a
-            href="mailto:rafael.leonardi98@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer">
-            <font-awesome-icon icon="fa-solid fa-envelope" />
+
+        <span class="mail">
+
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
+            
+            <span class="accent">
             rafael.leonardi98@gmail.com
-            </a>
+            </span>
+            
+          </a>
         </span>
       </p>
 
@@ -51,14 +52,10 @@
         <br />
 
         <span class="accent mail">
-          
-          <a
-            href="mailto:rafael.leonardi98@gmail.com"
-            target="_blank"
-            rel="noopener noreferrer">
-            <font-awesome-icon icon="fa-solid fa-envelope" />
+          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
+
             rafael.leonardi98@gmail.com
-            </a>
+          </a>
         </span>
       </p>
     </div>
@@ -67,35 +64,14 @@
     <div class="container_form">
       <form class="form" @submit.prevent="sendEmail">
         <label class="input_label">Name</label>
-        <input
-          required
-          class="input"
-          type="text"
-          v-model="name"
-          name="name"
-          placeholder="Your Name"
-        />
+        <input required class="input" type="text" v-model="name" name="name" placeholder="Your Name" />
 
         <label class="input_label">Email</label>
-        <input
-          required
-          class="input"
-          type="email"
-          v-model="email"
-          name="email"
-          placeholder="Your Email"
-        />
+        <input required class="input" type="email" v-model="email" name="email" placeholder="Your Email" />
 
         <label class="input_label">Message</label>
-        <textarea
-          required
-          class="input"
-          name="message"
-          v-model="message"
-          cols="30"
-          rows="5"
-          placeholder="Message"
-        ></textarea>
+        <textarea required class="input" name="message" v-model="message" cols="30" rows="5"
+          placeholder="Message"></textarea>
 
         <input class="submit" type="submit" value="Send" />
       </form>
@@ -145,7 +121,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 a {
   text-decoration: none;
   text-decoration-color: var(--lilla);
