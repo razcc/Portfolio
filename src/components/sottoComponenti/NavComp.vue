@@ -220,9 +220,11 @@ a {
         width: 100%;
         display: flex;
         justify-content: space-around;
+        margin-top: 50px;
 
         .icon {
           color: var(--lilla);
+          font-size: 2rem;
         }
       }
 
@@ -284,7 +286,7 @@ a {
   transform: translateY(-150%);
 }
 
-@media screen and (min-width: 1075px) {
+@media screen and (min-width: 1130px) {
   #navComp {
     display: block;
   }
