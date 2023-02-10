@@ -122,7 +122,7 @@
                               <div v-if="descriptionActive == 'lanrick'" class="boolflix_description">
                                     <h2>Lanrick</h2>
 
-                                    <p>
+                                    <p class="paragrafo_descrizione">
                                           Lanrick è stato il primo progetto completo a livello di Font-end con
                                           l'utilizzo di VueJs.
                                           <br>
@@ -141,7 +141,7 @@
                               <div v-if="descriptionActive == 'boolflix'" class="boolflix_description">
                                     <h2>Boolflix</h2>
 
-                                    <p>
+                                    <p class="paragrafo_descrizione">
                                           Boolflix è stato il primo progetto con cui ho utilizzato le API.
                                           <br>
                                           Ho replicato la WebApp Netflix, affidandomi a "The Movie Database API (TMDB)".
@@ -166,7 +166,7 @@
                               <div v-if="descriptionActive == 'dc'" class="boolflix_description">
                                     <h2>Dc Comics</h2>
 
-                                    <p>
+                                    <p class="paragrafo_descrizione">
                                           Questa replica di una sezione del sito della Dc Comics, è stata relizzata
                                           a livello full-stack con Laravel.
                                           <br>
@@ -183,7 +183,7 @@
                               <div v-if="descriptionActive == 'cats'" class="boolflix_description">
                                     <h2>Cat's Life</h2>
 
-                                    <p>
+                                    <p class="paragrafo_descrizione">
                                           
                                     </p>
                               </div>
@@ -191,6 +191,9 @@
                               <!-- PROGETTO FINALE -->
                               <div v-if="descriptionActive == 'final'" class="boolflix_description">
                                     <h2>Progetto finale</h2>
+
+                                    <p class="paragrafo_descrizione">
+                                    </p>
                               </div>
                         </div>
                   </div>
@@ -350,6 +353,10 @@ export default {
                               }
                         }
 
+                        p{
+
+                        }
+
                   }
             }
 
@@ -423,6 +430,9 @@ export default {
       .lista_cont {
             width: 90% !important;
 
+      }
+      .description{
+            padding: 2px !important;
       }
 }
 </style>
