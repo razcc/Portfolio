@@ -373,6 +373,10 @@ export default {
 @media screen and (max-width: 633px) {
       #projects{
             padding: 0 !important;
+      }     
+
+      .title{
+            font-size: 2.5rem;
       }
 
       .container {
