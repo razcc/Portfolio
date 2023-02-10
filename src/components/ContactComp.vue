@@ -20,11 +20,11 @@
         <br />
         <br />
 
-        <span class="mail">
+        <span>
 
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
+          <a class="" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
             
-            <span class="accent">
+            <span class="accent mail">
             rafael.leonardi98@gmail.com
             </span>
             
@@ -52,7 +52,7 @@
         <br />
 
         <span class="accent mail">
-          <a href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
+          <a class="mail" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
 
             rafael.leonardi98@gmail.com
           </a>
@@ -205,5 +205,22 @@ a {
   #contact {
     display: flex;
   }
+}
+
+@media screen and (max-width: 497px) {
+  .accent {
+        font-size: 1rem !important;
+      }
+      h2{
+        padding-top: 60px;
+      }
+}
+@media screen and (max-width: 497px) {
+  .accent {
+        font-size: 1rem !important;
+      }
+      h2{
+        padding-top: 60px;
+      }
 }
 </style>

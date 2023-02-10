@@ -7,8 +7,8 @@
                         <img v-if="progettoActive == 1" src="/assets/boolflix_anteprima.png" alt="">
                         <img v-else-if="progettoActive == 2" src="/assets/dc_anteprima.png" alt="">
                         <img v-else-if="progettoActive == 3" src="/assets/landrick_anteprima.png" alt="">
-                        <img v-else-if="progettoActive == 4" src="/assets/workInPRogress.jpg" alt="">
-                        <img v-else-if="progettoActive == 5" src="/assets/workInPRogress.jpg" alt="">
+                        <img v-else-if="progettoActive == 4" src="/assets/boolflix_anteprima.png" alt="">
+                        <img v-else-if="progettoActive == 5" src="/assets/boolflix_anteprima.png" alt="">
                   </div>
 
                   <div class="lista_cont">
@@ -131,18 +131,20 @@ export default {
 
 <style lang="scss" scoped>
 #projects {
-      height: 100vh;
-      padding: 5% 5% 0 5%;
+      height: 90vh;
+      padding: 5% 2% 0 3%;
       color: var(--text1);
 
       h2 {
+            font-size: 2.3rem;
             text-align: center;
-            font-size: 2.5rem;
+            text-shadow: 3px 3px 10px var(--lilla);
       }
 
       .container {
             display: flex;
             align-items: center;
+            justify-content: center;
             height: 100%;
 
             .anteprima,
@@ -187,7 +189,7 @@ export default {
 
                               &:hover {
                                     font-size: 1.8rem;
-
+                                    text-shadow: 4px 4px 10px var(--lilla);
                               }
 
                               &:hover .fa-arrow-left {
@@ -226,6 +228,51 @@ export default {
       }
       100% {
             transform: translateX(0);
+      }
+}
+@media screen and (max-width: 633px){
+      h2{
+            display: none;
+      }
+      .container{
+            height: 100% !important;
+            flex-direction: column;
+            gap: 20px;
+      }
+      .anteprima{
+            padding: 0px !important;
+            width: 80% !important;
+      }
+
+      .progetto_singolo{
+            font-size: 1.2rem !important;
+      }
+      .lista_cont{
+            width: 90% !important;
+            margin-bottom: 30px;
+      }
+}
+@media screen and (max-width: 1000px){
+      h2{
+            display: none;
+      }
+      .container{
+            height: 100% !important;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 70px;
+      }
+      .anteprima{
+            padding: 0px !important;
+            width: 60% !important;
+      }
+
+      .progetto_singolo{
+            font-size: 1.2rem !important;
+      }
+      .lista_cont{
+            width: 90% !important;
+            
       }
 }
 </style>

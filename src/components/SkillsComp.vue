@@ -150,7 +150,7 @@ img {
       // BACK End
       .back_end {
             margin-top: 2rem;
-
+            padding-bottom: 30px;
 
             h2 {
                   font-size: 2rem;
