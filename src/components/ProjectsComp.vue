@@ -374,9 +374,6 @@ export default {
       #projects{
             padding: 0 !important;
       }
-      .title {
-            display: none;
-      }
 
       .container {
             height: 100% !important;
@@ -399,9 +396,7 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-      .title {
-            display: none;
-      }
+
 
       .container {
             height: 100% !important;
