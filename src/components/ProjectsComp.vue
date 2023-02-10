@@ -7,15 +7,32 @@
                         <img v-if="progettoActive == 1" src="/assets/boolflix_anteprima.png" alt="">
                         <img v-else-if="progettoActive == 2" src="/assets/dc_anteprima.png" alt="">
                         <img v-else-if="progettoActive == 3" src="/assets/landrick_anteprima.png" alt="">
-                        <img v-else-if="progettoActive == 4" src="/assets/boolflix_anteprima.png" alt="">
-                        <img v-else-if="progettoActive == 5" src="/assets/boolflix_anteprima.png" alt="">
+                        <img v-else-if="progettoActive == 4" src="/assets/boolflix_anteprima.png" class="workInProgress"
+                              alt="">
+                        <img v-else-if="progettoActive == 5" src="/assets/boolflix_anteprima.png" class="workInProgress"
+                              alt="">
                   </div>
 
                   <div class="lista_cont">
-                        <ul class="lista_progetti">
+                        <ul class="lista_progetti" v-if="descriptionActive == 'none'">
+                              <!-- landrick -->
+                              <li @click="descriptionActive = 'lanrick'" @mouseenter="progettoActive = 3"
+                                    class="progetto_singolo">
+
+                                    <span>
+                                          Landrick
+                                          <font-awesome-icon icon="fa-solid fa-arrow-left" />
+                                    </span>
+                                    <ul class="linguaggi">
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-vuejs" />
+                                          </li>
+                                    </ul>
+                              </li>
 
                               <!-- Boolflix -->
-                              <li @mouseenter="progettoActive = 1" class="progetto_singolo">
+                              <li @click="descriptionActive = 'boolflix'" @mouseenter="progettoActive = 1"
+                                    class="progetto_singolo">
 
                                     <span>
                                           Boolflix
@@ -32,7 +49,8 @@
                               </li>
 
                               <!-- DC -->
-                              <li @mouseenter="progettoActive = 2" class="progetto_singolo">
+                              <li @click="descriptionActive = 'dc'" @mouseenter="progettoActive = 2"
+                                    class="progetto_singolo">
                                     <span>
                                           DC Comics
                                           <font-awesome-icon icon="fa-solid fa-arrow-left" />
@@ -48,22 +66,9 @@
                                     </ul>
                               </li>
 
-                              <!-- landrick -->
-                              <li @mouseenter="progettoActive = 3" class="progetto_singolo">
-
-                                    <span>
-                                          Landrick
-                                          <font-awesome-icon icon="fa-solid fa-arrow-left" />
-                                    </span>
-                                    <ul class="linguaggi">
-                                          <li>
-                                                <font-awesome-icon icon="fa-brands fa-vuejs" />
-                                          </li>
-                                    </ul>
-                              </li>
-
                               <!-- Cat's Life -->
-                              <li @mouseenter="progettoActive = 4" class="progetto_singolo">
+                              <li @click="descriptionActive = 'cats'" @mouseenter="progettoActive = 4"
+                                    class="progetto_singolo">
 
                                     <span>
                                           Cat's Life
@@ -84,7 +89,8 @@
                               </li>
 
                               <!-- Progetto finale -->
-                              <li @mouseenter="progettoActive = 5" class="progetto_singolo">
+                              <li @click="descriptionActive = 'final'" @mouseenter="progettoActive = 5"
+                                    class="progetto_singolo">
 
                                     <span>
                                           Progetto finale
@@ -102,8 +108,97 @@
                                           </li>
                                     </ul>
                               </li>
+
                         </ul>
+
+                        <!-- -------DESCRIZIONI PROGETTI_______________ -->
+                        <div class="description" :class="(descriptionActive == 'none') ? 'dis_none' : 'dis_block'">
+
+                              <!-- X di chiusura -->
+                              <font-awesome-icon @click="descriptionActive = 'none'" icon="fa-solid fa-x" />
+
+
+                              <!-- LANRICK -->
+                              <div v-if="descriptionActive == 'lanrick'" class="boolflix_description">
+                                    <h2>Lanrick</h2>
+
+                                    <p>
+                                          Lanrick è stato il primo progetto completo a livello di Font-end con
+                                          l'utilizzo di VueJs.
+                                          <br>
+                                          Ho dovuto affrontare per la prima volta la gestione quasi in completa
+                                          autonomia delle risorse.
+                                          Infatti ,da parte di Boolean, non mi sono stati forniti tutti gli asstes
+                                          neccesari per la realizzazione
+                                          del progetto.
+                                          <br>
+                                          Oltre alle nuove sfide, la parte che più mi ha coinvolto è stato una feature
+                                          che ho voluto aggiungere, cioè la realizzazione del cambio tema.
+                                          Ho posizionato un bottone in position fixed sul lato sinistro, al click si
+                                          estende un menu dal quale
+                                          è possibile cambiare il tema del sito da light a dark
+                                    </p>
+                              </div>
+
+                              <!-- BOOLFLIX -->
+                              <div v-if="descriptionActive == 'boolflix'" class="boolflix_description">
+                                    <h2>Boolflix</h2>
+
+                                    <p>
+                                          Boolflix è stato il primo progetto con cui ho utilizzato le API.
+                                          <br>
+                                          Ho replicato la WebApp Netflix, affidandomi a "The Movie Database API (TMDB)".
+                                          <br>
+                                          Grazie a TMDB, ho potuto fare diverse richieste api, per ottenere diversi
+                                          risultati tra cui:
+                                    <ul>
+                                          <li>
+                                                Una ricerca di film e telefilm
+                                          </li>
+                                          <li>
+                                                Una selezione basata sui generi e sulla lingua
+                                          </li>
+                                          <li>
+                                                Una selezione mirata sulle top del momento
+                                          </li>
+                                    </ul>
+                                    </p>
+                              </div>
+
+                              <!-- DC COMICS -->
+                              <div v-if="descriptionActive == 'dc'" class="boolflix_description">
+                                    <h2>Dc Comics</h2>
+
+                                    <p>
+                                          Questa replica di una sezione del sito della Dc Comics, è stata relizzata
+                                          a livello full-stack con Laravel.
+                                          <br>
+                                          Con l'utilizzo di Mamp e phpMyAdmin, ho realizzato un dataBase in locale, su
+                                          cui ho caricato dei dati tramite seeder.
+                                          L'utente ha la possibiltà di visualizzare la lista completa dei fumetti
+                                          cliccando sulla voce del menu dedicata alla show del singolo
+                                          fumetto.
+                                    </p>
+                              </div>
+
+
+                              <!-- CAT'S LIFE -->
+                              <div v-if="descriptionActive == 'cats'" class="boolflix_description">
+                                    <h2>Cat's Life</h2>
+
+                                    <p>
+                                          
+                                    </p>
+                              </div>
+
+                              <!-- PROGETTO FINALE -->
+                              <div v-if="descriptionActive == 'final'" class="boolflix_description">
+                                    <h2>Progetto finale</h2>
+                              </div>
+                        </div>
                   </div>
+
+
             </div>
 
 
@@ -120,6 +215,7 @@ export default {
       data() {
             return {
                   progettoActive: 1,
+                  descriptionActive: "none",
             }
       },
       methods: {
@@ -130,6 +226,18 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.workInProgress {
+      filter: blur(20px);
+}
+
+.dis_none {
+      display: none;
+}
+
+.dis_block {
+      display: block;
+}
+
 #projects {
       height: 90vh;
       padding: 5% 2% 0 3%;
@@ -147,6 +255,7 @@ export default {
             justify-content: center;
             height: 100%;
 
+
             .anteprima,
             .lista_cont {
                   width: 50%;
@@ -163,6 +272,7 @@ export default {
             }
 
             .lista_cont {
+                  position: relative;
 
                   .lista_progetti {
                         height: 100%;
@@ -213,7 +323,40 @@ export default {
                         }
 
                   }
+
+
+                  // -----------DESCRIZIONI-------------
+                  .description {
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                        width: 100%;
+                        transform: translateY(-50%);
+                        background-color: var(--verde-olivo);
+                        padding: 30px;
+                        line-height: 2rem;
+
+                        ul {
+                              padding-left: 20px;
+                        }
+
+                        .fa-x {
+                              position: absolute;
+                              top: 2%;
+                              right: 2%;
+                              font-size: 2rem;
+                              cursor: pointer;
+                              transition: all .6s;
+
+                              &:hover {
+                                    font-size: 2.2rem;
+                              }
+                        }
+
+                  }
             }
+
+
 
       }
 
@@ -223,56 +366,66 @@ export default {
       0% {
             transform: translateX(0);
       }
-      50%{
+
+      50% {
             transform: translateX(100%);
       }
+
       100% {
             transform: translateX(0);
       }
 }
-@media screen and (max-width: 633px){
-      h2{
+
+@media screen and (max-width: 633px) {
+      h2 {
             display: none;
       }
-      .container{
+
+      .container {
             height: 100% !important;
             flex-direction: column;
             gap: 20px;
       }
-      .anteprima{
+
+      .anteprima {
             padding: 0px !important;
             width: 80% !important;
       }
 
-      .progetto_singolo{
+      .progetto_singolo {
             font-size: 1.2rem !important;
       }
-      .lista_cont{
+
+      .lista_cont {
             width: 90% !important;
             margin-bottom: 30px;
       }
 }
-@media screen and (max-width: 1000px){
-      h2{
+
+@media screen and (max-width: 1000px) {
+      h2 {
             display: none;
       }
-      .container{
+
+      .container {
             height: 100% !important;
             flex-direction: column;
             gap: 20px;
             margin-bottom: 70px;
       }
-      .anteprima{
+
+      .anteprima {
             padding: 0px !important;
             width: 60% !important;
       }
 
-      .progetto_singolo{
+      .progetto_singolo {
             font-size: 1.2rem !important;
       }
-      .lista_cont{
+
+      .lista_cont {
             width: 90% !important;
-            
+
       }
 }
 </style>
