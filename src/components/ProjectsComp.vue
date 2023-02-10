@@ -353,9 +353,6 @@ export default {
                               }
                         }
 
-                        p{
-
-                        }
 
                   }
             }
@@ -431,8 +428,10 @@ export default {
             width: 90% !important;
 
       }
+      
       .description{
-            padding: 2px !important;
-      }
-}
+            top: 0 !important;
+            left: 0 !important;
+            transform:  translateY(0) !important;
+      }}
 </style>
