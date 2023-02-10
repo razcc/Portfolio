@@ -1,7 +1,7 @@
 <template>
       <section id="projects">
-            <h2 class="progetto_singolo" v-if="propsLingua == 'english'">My Projects</h2>
-            <h2 class="progetto_singolo" v-else>Proggetti</h2>
+            <h2 class="progetto_singolo title" v-if="propsLingua == 'english'">My Projects</h2>
+            <h2 class="progetto_singolo title" v-else>Proggetti</h2>
             <div class="container">
                   <div class="anteprima">
                         <img v-if="progettoActive == 1" src="/assets/boolflix_anteprima.png" alt="">
@@ -14,7 +14,7 @@
                   </div>
 
                   <div class="lista_cont">
-                        <ul class="lista_progetti" :class="(descriptionActive == 'none') ? '' : 'dis_lista'">
+                        <ul class="lista_progetti" :class="(descriptionActive != 'none') ? 'dis_none ' : ''">
                               <!-- landrick -->
                               <li @click="descriptionActive = 'lanrick'" @mouseenter="progettoActive = 3"
                                     class="progetto_singolo">
@@ -233,7 +233,7 @@ export default {
       opacity: 0;
 }
 .dis_none {
-      display: none;
+      display: none !important;
 }
 
 .dis_block {
@@ -258,12 +258,8 @@ export default {
             height: 100%;
 
 
-            .anteprima,
-            .lista_cont {
-                  width: 50%;
-            }
-
             .anteprima {
+                  width: 50%;
                   display: flex;
                   align-items: center;
                   padding: 0 30px;
@@ -274,6 +270,7 @@ export default {
             }
 
             .lista_cont {
+                  width: 50%;
                   position: relative;
 
                   .lista_progetti {
@@ -329,19 +326,13 @@ export default {
 
                   // -----------DESCRIZIONI-------------
                   .description {
-                        position: absolute;
-                        top: 50%;
-                        right: 0;
-                        width: 100%;
-                        transform: translateY(-50%);
                         background-color: var(--verde-olivo);
-                        padding: 30px;
+                        padding: 20px;
                         line-height: 2rem;
-
+                        position: relative;
                         ul {
                               padding-left: 20px;
                         }
-
                         .fa-x {
                               position: absolute;
                               top: 2%;
@@ -380,7 +371,10 @@ export default {
 }
 
 @media screen and (max-width: 633px) {
-      h2 {
+      #projects{
+            padding: 0 !important;
+      }
+      .title {
             display: none;
       }
 
@@ -391,8 +385,7 @@ export default {
       }
 
       .anteprima {
-            padding: 0px !important;
-            width: 80% !important;
+            display: none !important;
       }
 
       .progetto_singolo {
@@ -406,7 +399,7 @@ export default {
 }
 
 @media screen and (max-width: 1000px) {
-      h2 {
+      .title {
             display: none;
       }
 
@@ -434,7 +427,6 @@ export default {
       .description{
             top: 0 !important;
             left: 0 !important;
-            transform:  translateY(0) !important;
             
       }}
 </style>
