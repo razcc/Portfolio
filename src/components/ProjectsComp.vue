@@ -123,7 +123,7 @@
 
                               <!-- LANRICK -->
                               <div v-if="descriptionActive == 'lanrick'" class="boolflix_description">
-                                    <h2>Lanrick</h2>
+                                    <h2 class="title_desc">Lanrick</h2>
 
                                     <p class="paragrafo_descrizione">
                                           Lanrick è stato il primo progetto completo a livello di Font-end con
@@ -142,7 +142,7 @@
 
                               <!-- BOOLFLIX -->
                               <div v-if="descriptionActive == 'boolflix'" class="boolflix_description">
-                                    <h2>Boolflix</h2>
+                                    <h2 class="title_desc">Boolflix</h2>
 
                                     <p class="paragrafo_descrizione">
                                           Boolflix è stato il primo progetto con cui ho utilizzato le API.
@@ -167,7 +167,7 @@
 
                               <!-- DC COMICS -->
                               <div v-if="descriptionActive == 'dc'" class="boolflix_description">
-                                    <h2>Dc Comics</h2>
+                                    <h2 class="title_desc">Dc Comics</h2>
 
                                     <p class="paragrafo_descrizione">
                                           Questa replica di una sezione del sito della Dc Comics, è stata relizzata
@@ -184,7 +184,7 @@
 
                               <!-- CAT'S LIFE -->
                               <div v-if="descriptionActive == 'cats'" class="boolflix_description">
-                                    <h2>Cat's Life</h2>
+                                    <h2 class="title_desc">Cat's Life</h2>
 
                                     <p class="paragrafo_descrizione">
                                           
@@ -193,7 +193,7 @@
 
                               <!-- PROGETTO FINALE -->
                               <div v-if="descriptionActive == 'final'" class="boolflix_description">
-                                    <h2>Progetto finale</h2>
+                                    <h2 class="title_desc">Progetto finale</h2>
 
                                     <p class="paragrafo_descrizione">
                                     </p>
@@ -349,6 +349,9 @@ export default {
                               }
                         }
 
+                        .title_desc{
+                              padding-bottom: 30px;
+                        }
 
                   }
             }
