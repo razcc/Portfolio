@@ -14,7 +14,7 @@
                   </div>
 
                   <div class="lista_cont">
-                        <ul class="lista_progetti" v-if="descriptionActive == 'none'">
+                        <ul class="lista_progetti" :class="(descriptionActive == 'none') ? '' : 'dis_lista'">
                               <!-- landrick -->
                               <li @click="descriptionActive = 'lanrick'" @mouseenter="progettoActive = 3"
                                     class="progetto_singolo">
@@ -229,7 +229,9 @@ export default {
 .workInProgress {
       filter: blur(20px);
 }
-
+.dis_lista{
+      opacity: 0;
+}
 .dis_none {
       display: none;
 }
@@ -433,5 +435,6 @@ export default {
             top: 0 !important;
             left: 0 !important;
             transform:  translateY(0) !important;
+            
       }}
 </style>
