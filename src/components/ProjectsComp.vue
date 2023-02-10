@@ -128,9 +128,6 @@
                                           <br>
                                           Ho dovuto affrontare per la prima volta la gestione quasi in completa
                                           autonomia delle risorse.
-                                          Infatti ,da parte di Boolean, non mi sono stati forniti tutti gli asstes
-                                          neccesari per la realizzazione
-                                          del progetto.
                                           <br>
                                           Oltre alle nuove sfide, la parte che più mi ha coinvolto è stato una feature
                                           che ho voluto aggiungere, cioè la realizzazione del cambio tema.
