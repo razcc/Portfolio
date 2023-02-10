@@ -106,6 +106,9 @@
                                           <li>
                                                 <font-awesome-icon icon="fa-brands fa-laravel" />
                                           </li>
+                                          <li>
+                                                <font-awesome-icon icon="fa-brands fa-git" />
+                                          </li>
                                     </ul>
                               </li>
 
