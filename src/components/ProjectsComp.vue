@@ -283,7 +283,6 @@ export default {
                         justify-content: center;
                         gap: 50px;
                         list-style: none;
-
                         .progetto_singolo {
                               font-size: 1.6rem;
                               cursor: pointer;
@@ -325,7 +324,6 @@ export default {
                         }
 
                   }
-
 
                   // -----------DESCRIZIONI-------------
                   .description {
