@@ -6,54 +6,44 @@
 
       <!-- Italiano -->
       <p v-if="propsLingua == 'italiano'">
-        Attualmente sto cercando il mio primo lavoro per avviare la mia
-        carriera.
-        <br />
-        E sono come una spugna pronta ad assorbire ogni conoscenza che susciti
-        la mia curiosità.
-        <br />
-        Sono disponibile per periodi di formazione e anche nello spostarmi
-        ovunque nel mondo. Se sei interessato a conoscermi, non esitare a
-        contattarmi compilando il form e ti ricontatterò il prima possibile.
-        <br />
-        Oppure, se preferisci, scrivimi direttamente alla mia mail:
-        <br />
+        Cerco un ambiente dinamico che pretenda tanto e che offra altrettante opportunità.
         <br />
 
+        Se pensi di potermi offrire questo e cerchi una persona che abbia sete di
+        conosceza con delle ottime basi di partenza, che ha molto da imparare e
+        altrettanto desiderio di mettersi in gioco. <br />
+        Hai trovato il tuo nuovo collaboratore! Contattami per conoscerci di persona.<br />
+        <br />
+        <br />
         <span>
-
-          <a class="" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
-            
-            <span class="accent mail">
-            rafael.leonardi98@gmail.com
-            </span>
-            
+          <a
+            class=""
+            href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com"
+            target="_blank"
+          >
+            <span class="accent mail"> rafael.leonardi98@gmail.com </span>
           </a>
         </span>
       </p>
 
       <!-- Inglese -->
       <p v-else>
-        I am currently looking for my first job to launch my career.
-        <br />
-        And I'm like a sponge ready to absorb any knowledge that arouses my
-        curiosity.
-        <br />
-        I'm available for training periods, and also to move anywhere in the
-        <span class="accent">globe</span>.
-        <br />
-        If you are interested in getting to know me, feel free to contact me by
-        submitting the form and I will get back to you as soon as possible.
+        I'm looking for a dynamic environment that demands a lot and offers just as many
+        opportunities.
         <br />
 
-        Or if you prefer,Click on the links below and write me directly to my
-        email:
-        <br />
-        <br />
+        If you think you can offer me this and you are looking for someone with a thirst
+        for knowledge with excellent starting points, which has a lot to learn and the
+        same desire to get involved. <br />
+        You have found your new collaborator! Contact me to get to know each other in
+        person.<br />
 
         <span class="accent mail">
-          <a class="mail" href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com" target="_blank">
-
+          <a
+            class="mail"
+            href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=rafael.leonardi98@gmail.com"
+            target="_blank"
+          >
             rafael.leonardi98@gmail.com
           </a>
         </span>
@@ -64,14 +54,35 @@
     <div class="container_form">
       <form class="form" @submit.prevent="sendEmail">
         <label class="input_label">Name</label>
-        <input required class="input" type="text" v-model="name" name="name" placeholder="Your Name" />
+        <input
+          required
+          class="input"
+          type="text"
+          v-model="name"
+          name="name"
+          placeholder="Your Name"
+        />
 
         <label class="input_label">Email</label>
-        <input required class="input" type="email" v-model="email" name="email" placeholder="Your Email" />
+        <input
+          required
+          class="input"
+          type="email"
+          v-model="email"
+          name="email"
+          placeholder="Your Email"
+        />
 
         <label class="input_label">Message</label>
-        <textarea required class="input" name="message" v-model="message" cols="30" rows="5"
-          placeholder="Message"></textarea>
+        <textarea
+          required
+          class="input"
+          name="message"
+          v-model="message"
+          cols="30"
+          rows="5"
+          placeholder="Message"
+        ></textarea>
 
         <input class="submit" type="submit" value="Send" />
       </form>
@@ -209,18 +220,18 @@ a {
 
 @media screen and (max-width: 497px) {
   .accent {
-        font-size: 1rem !important;
-      }
-      h2{
-        padding-top: 60px;
-      }
+    font-size: 1rem !important;
+  }
+  h2 {
+    padding-top: 60px;
+  }
 }
 @media screen and (max-width: 497px) {
   .accent {
-        font-size: 1rem !important;
-      }
-      h2{
-        padding-top: 60px;
-      }
+    font-size: 1rem !important;
+  }
+  h2 {
+    padding-top: 60px;
+  }
 }
 </style>
