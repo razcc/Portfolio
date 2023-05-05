@@ -71,11 +71,10 @@
           :class="marcatore == 2 ? 'displayOn' : 'displayOff'"
         >
           <span>
-            For the past 6 months I have been going through professional training as a
-            WebDeveloper.
+            Between 2022 and 2023 I did a professional training course as Web Developer.
             <br />
-            I started the training on my own before enrolling in
-            <span class="accent">Boolean</span>.
+            After self-studying and realizing that this is what I wanted from my future I
+            attended a <span class="accent">Boolean</span> course.
             <br />
             There are so many free resources on the Web, but I had the opportunity to
             accelerate my learning time by relying on a company of professionals with an
@@ -87,8 +86,9 @@
             And like assembling a puzzle the pieces slowly fit together, I increased my
             knowledge one step at a time.
             <br />
-            One of the projects that definitely got me most involved is Boolfix, a Netflix
-            rerun.
+            I am a rational and curious person, I love cakes and forests. For a deepening
+            on a professional level do not hesitate to
+            <a href="#contact">Contact me</a>
           </span>
         </div>
       </div>
@@ -113,7 +113,6 @@ export default {
 
 <style lang="scss" scoped>
 a {
-  
   color: var(--lilla);
 }
 #abaout {
