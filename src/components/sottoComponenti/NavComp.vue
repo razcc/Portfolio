@@ -3,11 +3,19 @@
   <!--   -->
   <!--  :class="{ 'hiddenDesktop': showNavbar }" -->
   <div v-scrollanimation id="navComp">
-    <font-awesome-icon v-on:click="showNavbar = true" class="burger" icon="fa-solid fa-bars" />
+    <font-awesome-icon
+      v-on:click="showNavbar = true"
+      class="burger"
+      icon="fa-solid fa-bars"
+    />
 
     <nav :class="showNavbar ? 'show nav' : ' hidden nav'">
       <ul>
-        <font-awesome-icon v-on:click="showNavbar = false" class="x" icon="fa-solid fa-x" />
+        <font-awesome-icon
+          v-on:click="showNavbar = false"
+          class="x"
+          icon="fa-solid fa-x"
+        />
         <li class="logo"><a href="#app">Rafael Leonardi</a></li>
 
         <!-- Lingua -->
@@ -18,36 +26,87 @@
 
         <!-- Inglese Menu -->
         <li v-if="linguaScelta == 'english'">
-          <a href="#app" v-on:click="showNavbar = false" class="nav_item_hover">About</a>
+          <a
+            href="#about"
+            v-on:click="showNavbar = false"
+            class="nav_item_hover"
+            >About</a
+          >
         </li>
         <li v-if="linguaScelta == 'english'">
-          <a href="#skills" v-on:click="showNavbar = false" class="nav_item_hover">Skills</a>
+          <a
+            href="#skills"
+            v-on:click="showNavbar = false"
+            class="nav_item_hover"
+            >Skills</a
+          >
         </li>
         <li v-if="linguaScelta == 'english'">
-          <a href="#projects" v-on:click="showNavbar = false" class="nav_item_hover">Project</a>
+          <a
+            href="#projects"
+            v-on:click="showNavbar = false"
+            class="nav_item_hover"
+            >Project</a
+          >
         </li>
         <li v-if="linguaScelta == 'english'">
-          <a href="#contact" v-on:click="showNavbar = false" class="nav_item_hover">Contact</a>
+          <a
+            href="#contact"
+            v-on:click="showNavbar = false"
+            class="nav_item_hover"
+            >Contact</a
+          >
         </li>
         <li v-if="linguaScelta == 'english'" class="resume">
-          <a href="./assets/Rafael-LeonardiCV.pdf" target="_blank" v-on:click="showNavbar = false">Resume</a>
+          <a
+            href="./assets/Rafael-LeonardiCV.pdf"
+            target="_blank"
+            v-on:click="showNavbar = false"
+            >Resume</a
+          >
         </li>
 
         <!-- Italiano Menu -->
         <li v-if="linguaScelta == 'italiano'">
-          <a href="#app" v-on:click="showNavbar = false" class="nav_item_hover">Chi sono</a>
+          <a
+            href="#about"
+            v-on:click="showNavbar = false"
+            class="nav_item_hover"
+            >Chi sono</a
+          >
         </li>
         <li v-if="linguaScelta == 'italiano'">
-          <a href="#skills" v-on:click="showNavbar = false" class="nav_item_hover">Competenze</a>
+          <a
+            href="#skills"
+            v-on:click="showNavbar = false"
+            class="nav_item_hover"
+            >Competenze</a
+          >
         </li>
         <li v-if="linguaScelta == 'italiano'">
-          <a href="#projects" v-on:click="showNavbar = false" class="nav_item_hover">Progetti</a>
+          <a
+            href="#projects"
+            v-on:click="showNavbar = false"
+            class="nav_item_hover"
+          >
+            Progetti
+          </a>
         </li>
         <li v-if="linguaScelta == 'italiano'">
-          <a href="#contact" v-on:click="showNavbar = false" class="nav_item_hover">Contattami</a>
+          <a
+            href="#contact"
+            v-on:click="showNavbar = false"
+            class="nav_item_hover"
+            >Contattami</a
+          >
         </li>
         <li v-if="linguaScelta == 'italiano'" class="resume">
-          <a href="./assets/Rafael-LeonardiCV.pdf" target="_blank" v-on:click="showNavbar = false">Resume</a>
+          <a
+            href="./assets/Rafael-LeonardiCV.pdf"
+            target="_blank"
+            v-on:click="showNavbar = false"
+            >Resume</a
+          >
         </li>
 
         <!-- Social Media -->
@@ -55,7 +114,10 @@
           <a target="_blank" href="https://github.com/razcc">
             <font-awesome-icon class="icon" icon="fa-brands fa-github" />
           </a>
-          <a target="_blank" href="https://www.linkedin.com/in/rafael-leonardi-a667b4215/">
+          <a
+            target="_blank"
+            href="https://www.linkedin.com/in/rafael-leonardi-a667b4215/"
+          >
             <font-awesome-icon class="icon" icon="fa-brands fa-linkedin-in" />
           </a>
           <a target="_blank" href="https://codepen.io/your-work/">
@@ -64,9 +126,10 @@
           <a
             href="mailto:rafael.leonardi98@gmail.com"
             target="_blank"
-            rel="noopener noreferrer">
-            <font-awesome-icon class="icon"  icon="fa-solid fa-envelope" />
-            </a>
+            rel="noopener noreferrer"
+          >
+            <font-awesome-icon class="icon" icon="fa-solid fa-envelope" />
+          </a>
         </div>
       </ul>
     </nav>
@@ -74,7 +137,6 @@
 </template>
 
 <script>
-
 export default {
   name: "NavComp",
   props: {},
@@ -83,39 +145,39 @@ export default {
       showNavbar: false,
       lastScrollPosition: 0,
       linguaScelta: "italiano",
-    };
+    }
   },
   created() {
-    this.$emit("emitLingua", this.linguaScelta);
+    this.$emit("emitLingua", this.linguaScelta)
   },
   mounted() {
-    window.addEventListener("scroll", this.onScroll);
+    window.addEventListener("scroll", this.onScroll)
   },
   beforeDestroy() {
-    window.removeEventListener("scroll", this.onScroll);
+    window.removeEventListener("scroll", this.onScroll)
   },
   methods: {
     onScroll() {
       // Get the current scroll position
       const currentScrollPosition =
-        window.pageYOffset || document.documentElement.scrollTop;
+        window.pageYOffset || document.documentElement.scrollTop
       // Because of momentum scrolling on mobiles, we shouldn't continue if it is less than zero
       if (currentScrollPosition < 0) {
-        return;
+        return
       }
 
       // // Here we determine whether we need to show or hide the navbar
       // this.showNavbar = currentScrollPosition < this.lastScrollPosition
 
       // Set the current scroll position as the last scroll position
-      this.lastScrollPosition = currentScrollPosition;
-      this.$emit("emitScrol", this.lastScrollPosition);
+      this.lastScrollPosition = currentScrollPosition
+      this.$emit("emitScrol", this.lastScrollPosition)
     },
   },
   updated() {
-    this.$emit("emitLingua", this.linguaScelta);
+    this.$emit("emitLingua", this.linguaScelta)
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>

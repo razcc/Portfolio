@@ -1,5 +1,5 @@
 <template>
-  <div id="abaout">
+  <div id="about">
     <!-- Img Cont -->
     <div class="img_cont">
       <div v-scroll2 class="square"></div>
@@ -10,9 +10,9 @@
       />
     </div>
 
-    <!-- Descrizione -->
+    <!-- Description -->
     <div class="container_description">
-      <!-- Introdduzione -->
+      <!-- Introduction -->
       <div v-scrollanimation class="introduction">
         <!-- Saluto Cont-->
         <div class="saluto_cont">
@@ -27,7 +27,7 @@
           <span class="surname">Leonardi</span>
         </div>
 
-        <!-- Professone -->
+        <!-- profession -->
         <div class="profession">
           <h1>Full Stack Web Developer</h1>
         </div>
@@ -41,25 +41,26 @@
           :class="marcatore == 2 ? 'displayOn' : 'displayOff'"
         >
           <span>
-            Fra il 2022 e il 2023 ho affrontato un percorso formativo professionale come
-            WebDeveloper.
+            Fra il 2022 e il 2023 ho affrontato un percorso formativo
+            professionale come WebDeveloper.
             <br />
-            Dopo aver studiato in autonomia e aver capito che era questo che volevo dal
-            mio futuro ho deciso di iscirvermi a <span class="accent">Boolean</span>.
+            Dopo aver studiato in autonomia e aver capito che era questo che
+            volevo dal mio futuro ho deciso di iscirvermi a
+            <span class="accent">Boolean</span>.
             <br />
-            Le risorse gratis nel Web sono tante ma Boolean mi ha dato l'occasione di
-            accelerare i tempi di apprendimento, affidandomi ad una azienda di
-            professionisti con un percorso gia ben definito.
+            Le risorse gratis nel Web sono tante ma Boolean mi ha dato
+            l'occasione di accelerare i tempi di apprendimento, affidandomi ad
+            una azienda di professionisti con un percorso gia ben definito.
             <br />
             Ho avuto modo di affrontare numerosi progetti, ognuno con difficolta
-            specifiche, partendo dal front-end fino ad arrivare al back-end e la gestione
-            dei dati.
+            specifiche, partendo dal front-end fino ad arrivare al back-end e la
+            gestione dei dati.
             <br />
-            E come montando un puzzle i pezzi si incastrano pian paino, ho aumentato la
-            mia conoscenza un passo alla volta.
+            E come montando un puzzle i pezzi si incastrano pian paino, ho
+            aumentato la mia conoscenza un passo alla volta.
             <br />
-            Sono una persona razionale e curiosa, amo le torte e le foreste. Per un
-            approfondimento a livello professionale non esitare a
+            Sono una persona razionale e curiosa, amo le torte e le foreste. Per
+            un approfondimento a livello professionale non esitare a
             <a href="#contact">Contattarmi</a>
           </span>
         </div>
@@ -71,23 +72,25 @@
           :class="marcatore == 2 ? 'displayOn' : 'displayOff'"
         >
           <span>
-            Between 2022 and 2023 I did a professional training course as Web Developer.
+            Between 2022 and 2023 I did a professional training course as Web
+            Developer.
             <br />
-            After self-studying and realizing that this is what I wanted from my future I
-            attended a <span class="accent">Boolean</span> course.
+            After self-studying and realizing that this is what I wanted from my
+            future I attended a <span class="accent">Boolean</span> course.
             <br />
-            There are so many free resources on the Web, but I had the opportunity to
-            accelerate my learning time by relying on a company of professionals with an
-            already well-defined path.
+            There are so many free resources on the Web, but I had the
+            opportunity to accelerate my learning time by relying on a company
+            of professionals with an already well-defined path.
             <br />
-            I was able to tackle numerous projects, each with specific difficulties,
-            starting with the front-end and ending with the back-end and data management.
+            I was able to tackle numerous projects, each with specific
+            difficulties, starting with the front-end and ending with the
+            back-end and data management.
             <br />
-            And like assembling a puzzle the pieces slowly fit together, I increased my
-            knowledge one step at a time.
+            And like assembling a puzzle the pieces slowly fit together, I
+            increased my knowledge one step at a time.
             <br />
-            I am a rational and curious person, I love cakes and forests. For a deepening
-            on a professional level do not hesitate to
+            I am a rational and curious person, I love cakes and forests. For a
+            deepening on a professional level do not hesitate to
             <a href="#contact">Contact me</a>
           </span>
         </div>
@@ -106,16 +109,16 @@ export default {
     return {
       marcatore: 2,
       img: "profiloRafael.jpeg",
-    };
+    }
   },
-};
+}
 </script>
 
 <style lang="scss" scoped>
 a {
   color: var(--lilla);
 }
-#abaout {
+#about {
   padding-top: 10%;
   display: flex;
   flex-direction: column;
